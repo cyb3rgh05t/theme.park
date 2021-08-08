@@ -10,8 +10,25 @@
 /*		   		        Made by @gilbN					 */
 /* 			      https://github.com/gilbN/theme.park			 */
 
+:root {
+    --color-text: var(--text);
+    --color-secondary-alpha-70: rgba(0, 0, 0, 0.35);
+    --color-primary-light-4: rgb(var(--gitea-color-primary-dark-4),.2);
+    --color-primary-light-2: rgb(var(--gitea-color-primary-dark-4),.4);
+    --color-primary: rgb(var(--gitea-color-primary-dark-4),.6);
+    --color-primary-dark-2: rgb(var(--gitea-color-primary-dark-4),.8);
+    --color-primary-dark-4: rgb(var(--gitea-color-primary-dark-4));
+  }
+
 body {
     background: var(--main-bg-color);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
 }
 
 * {
@@ -48,7 +65,7 @@ a:hover,
 .ui.cards>.card>.content>a.header:hover,
 .ui.card>.extra a:not(.ui):hover,
 .ui.cards>.card>.extra a:not(.ui):hover {
-    color: #fff;
+    color: var(--link-color-hover);
 }
 
 /* LINKS IMPORTANT */
@@ -64,7 +81,7 @@ a:hover,
 .ui .text.blue a:hover,
 .ui .text.grey a:hover,
 .ui .migrate a:hover {
-    color: #fff !important;
+    color: var(--link-color-hover) !important;
 }
 
 /* SCROLLBAR */
@@ -78,7 +95,14 @@ a:hover,
     body {
         overflow-y: auto;
         height: 100%;
-        background: var(--main-bg-color)
+        background: var(--main-bg-color);
+        background-repeat: repeat, no-repeat;
+        background-attachment: fixed, fixed;
+        background-position: center center, center center;
+        background-size: auto, cover;
+        -webkit-background-size: auto, cover;
+        -moz-background-size: auto, cover;
+        -o-background-size: auto, cover;
     }
 }
 
@@ -109,12 +133,6 @@ a:hover,
 
 /* TEXT */
 body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 p,
 /*strong,*/
 footer,
@@ -124,9 +142,7 @@ footer,
 .issue.list>.item .title,
 .ui.accordion .title:not(.ui),
 .ui.checkbox label,
-.ui.header,
 .ui .text.black,
-.ui.header .sub.header,
 .ui.form .inline.field>label,
 .form .help,
 .ui.form .field>label,
@@ -148,6 +164,21 @@ footer,
 .EasyMDEContainer .CodeMirror,
 .feeds .list ul li a .svg {
     color: var(--text);
+}
+
+.issue.list>.item .desc {
+    color: var(--text-muted);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.ui.header,
+.ui.header .sub.header {
+    color: var(--text-hover);
 }
 
 /* TEXT IMPORTANT */
@@ -189,7 +220,7 @@ b:hover,
 .following.bar.lightui.secondary.menu .active.item:hover {
     box-shadow: none;
     background: rgba(0, 0, 0, .25) !important;
-    color: var(--accent-color);
+    color: rgb(var(--accent-color));
 }
 
 .ui.secondary.menu .dropdown.item:hover,
@@ -221,7 +252,7 @@ b:hover,
 .organization.settings .ui.vertical.menu {
     display: block;
     flex-direction: column;
-    background: rgb(255 255 255 / 8%);
+    background: rgb(0 0 0 / 15%);
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
 }
 
@@ -234,7 +265,7 @@ b:hover,
 }
 
 .ui.segment {
-    background: rgb(255 255 255 / 8%) !important;
+    background: rgb(0 0 0 / 15%) !important;
 }
 
 .ui.attached.segment,
@@ -256,7 +287,7 @@ b:hover,
 }
 
 .ui.info.message {
-    background-color: rgb(255 255 255 / 8%);
+    background-color: rgb(0 0 0 / 15%);
     color: #276f86;
 }
 
@@ -302,12 +333,21 @@ b:hover,
     color: var(--text-hover);
     box-shadow: none;
 }
+
 .feeds .list ul li:not(:last-child) {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.feeds .list ul li.private {
+    background-color: rgb(255 255 255 / 10%);
+}
+
 .ui.secondary.pointing.menu {
     border-color: rgb(255 255 255 / 10%) !important;
+}
+
+.ui.secondary.pointing.menu .item {
+    color: var(--text);
 }
 
 .ui.repository.list .item:not(:first-child) {
@@ -320,17 +360,38 @@ b:hover,
 .ui.basic.modal>.actions,
 .ui.basic.modal>.content,
 .ui.basic.modal>.header {
-    background-color: var(--modal-bg-color);
+    background: var(--modal-bg-color);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
 }
 
 .ui.modal {
     background: var(--modal-bg-color);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
 }
 
 .ui.modal>.header {
     display: block;
     font-family: Roboto, Helvetica Neue, Arial, Helvetica, sans-serif;
     background: var(--modal-bg-color);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
     margin: 0;
     padding: 1.25rem 1.5rem;
     box-shadow: none;
@@ -345,10 +406,24 @@ b:hover,
     line-height: 1.4;
     padding: 1.5rem;
     background: var(--modal-bg-color);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
 }
 
 .ui.modal>.actions {
     background: var(--modal-bg-color);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
     padding: 1rem;
     border-top: 1px solid rgb(255 255 255 / 0.1);
     text-align: right;
@@ -363,6 +438,7 @@ b:hover,
 .ui.menu.new-menu {
     background: rgb(0 0 0 / 25%);
 }
+
 .ui.menu.new-menu::after {
     background: transparent;
 }
@@ -376,7 +452,7 @@ b:hover,
 .ui.secondary.pointing.menu .active.item,
 .ui.secondary.pointing.menu .active.item:hover {
     border-color: currentColor;
-    color: var(--accent-color);
+    color: rgb(var(--accent-color));
 }
 
 .ui.tabular.menu .item {
@@ -397,6 +473,13 @@ b:hover,
 
 .ui.menu .dropdown.item .menu {
     background: var(--modal-bg-color);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
 }
 
 .ui.menu .ui.dropdown .menu>.item {
@@ -405,7 +488,7 @@ b:hover,
 
 .ui.menu .ui.dropdown .menu>.active.item {
     background: rgb(0 0 0 / 10%) !important;
-    color: var(--accent-color) !important;
+    color: rgb(var(--accent-color)) !important;
 }
 
 .ui.menu .ui.dropdown .menu>.item:hover,
@@ -430,6 +513,13 @@ b:hover,
 
 .ui.dropdown .menu {
     background: var(--modal-bg-color);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
     border-color: rgb(255 255 255 / 10%);
 }
 
@@ -444,7 +534,7 @@ b:hover,
 }
 
 .ui.dropdown .menu .active.item {
-    color: var(--accent-color);
+    color: rgb(var(--accent-color));
     outline: none !important;
 }
 
@@ -502,6 +592,13 @@ textarea:hover {
 
 .ui.pointing.dropdown>.menu:not(.hidden):after {
     background: var(--modal-bg-color);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
 }
 
 /* MESSAGES */
@@ -538,7 +635,7 @@ svg.vch__wrapper .vch__months__labels__wrapper text.vch__month__label[data-v-a9c
 
 #app .ui.item.menu,
 .ui.item.menu .item {
-    background: rgb(255 255 255 / 8%);
+    background: rgb(0 0 0 / 15%);
     border-color: rgb(255 255 255 / 10%);
 }
 
@@ -561,7 +658,7 @@ svg.vch__wrapper .vch__months__labels__wrapper text.vch__month__label[data-v-a9c
 
 .ui.menu a.item:hover {
     color: var(--text-hover);
-    background: rgb(255 255 255 / 8%);
+    background: rgb(0 0 0 / 15%);
 }
 
 #app .ui.link.menu .item:hover,
@@ -573,13 +670,13 @@ svg.vch__wrapper .vch__months__labels__wrapper text.vch__month__label[data-v-a9c
 }
 
 #app .ui.secondary.segment {
-    background: rgb(255 255 255 / 8%);
+    background: rgb(0 0 0 / 15%);
     color: rgba(0, 0, 0, .6);
 }
 
 /* COMMIT CALENDAR */
 svg.vch__wrapper rect.vch__day__square[data-v-a9cfea66]:hover {
-    stroke: var(--accent-color);
+    stroke: rgb(var(--accent-color));
     stroke-width: 1px;
 }
 
@@ -619,6 +716,13 @@ svg.vch__wrapper rect.vch__day__square[data-v-a9cfea66]:hover {
 
 .repository .diff-detail-box {
     background: var(--main-bg-color);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
 }
 
 .repository .diff-detail-box.sticky {
@@ -660,7 +764,7 @@ svg.vch__wrapper rect.vch__day__square[data-v-a9cfea66]:hover {
 }
 
 .repository .segment.reactions .ui.label.basic {
-    color: var(--accent-color) !important;
+    color: rgb(var(--accent-color)) !important;
 }
 
 .repository .diff-file-box .code-diff-split tbody tr.add-code td:first-child,
@@ -713,7 +817,7 @@ td.blob-excerpt {
 }
 
 .repo-header .ui.breadcrumb a {
-    color: var(--accent-color);
+    color: rgb(var(--accent-color));
 }
 
 .repo-header .ui.breadcrumb a:hover {
@@ -730,6 +834,13 @@ td.blob-excerpt {
 
 .ui.tabular.menu .active.item {
     background: none var(--main-bg-color) !important;
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
     color: var(--text);
     border-color: rgb(255 255 255 / 10%) !important;
 }
@@ -741,13 +852,13 @@ td.blob-excerpt {
 .ui.tabular.menu .item:hover,
 .ui.tabular.menu .active.item,
 .ui.tabular.menu .active.item:hover {
-    color: var(--text-hover) !important;
+    color: rgb(var(--accent-color)) !important;
     border-radius: .28571429rem .28571429rem 0 0 !important;
 }
 
 .ui.card,
 .ui.cards>.card {
-    background: rgb(255 255 255 / 8%);
+    background: rgb(0 0 0 / 15%);
     box-shadow: none;
 }
 
@@ -823,6 +934,13 @@ a.ui.card:hover {
 .editor-preview,
 .editor-preview-side {
     background: var(--modal-bg-color) !important;
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
 }
 
 /* COMMIT STUFF */
@@ -844,7 +962,7 @@ a.ui.card:hover {
 }
 
 #git-graph-container li .author {
-    color: var(--accent-color);
+    color: rgb(var(--accent-color));
 }
 
 .repository .ui.segment.sub-menu .list .item a,
@@ -866,17 +984,19 @@ a.ui.card:hover {
 }
 
 .ui.blue.labels .label,
-.ui.ui.ui.blue.label {
-    background-color: var(--accent-color) !important;
-    border-color: var(--accent-color) !important;
-    color: var(--text-hover);
+.ui.ui.ui.blue.label,
+.ui.grey.labels .label,
+.ui.ui.ui.grey.label {
+    background-color: rgb(var(--accent-color)) !important;
+    border-color: rgb(var(--accent-color)) !important;
+    color: var(--label-text-color);
 }
 
 .ui.black.labels .label,
 .ui.ui.ui.black.label {
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
-    color: var(--button-text);
+    background-color: rgb(var(--accent-color));
+    border-color: rgb(var(--accent-color));
+    color: var(--label-text-color);
 }
 
 .repository #commits-table.ui.basic.striped.table tbody tr:nth-child(2n) {
@@ -929,7 +1049,7 @@ a.ui.card:hover {
 }
 
 .ui.form .dropzone {
-    border: 2px dashed var(--accent-color) !important;
+    border: 2px dashed rgb(var(--accent-color)) !important;
     box-shadow: none !important;
     padding: 0;
     min-height: 5rem;
@@ -961,11 +1081,11 @@ a.ui.card:hover {
 }
 
 .repository.view.issue .comment-list .comment .content>.header .actions a:hover {
-    color: var(--accent-color);
+    color: rgb(var(--accent-color));
 }
 
 .repository.view.issue .pull-desc code {
-    color: var(--accent-color);
+    color: rgb(var(--accent-color));
 }
 
 .repository .segment.reactions .ui.label.basic.blue {
@@ -978,8 +1098,8 @@ a.ui.card:hover {
 }
 
 .repository.view.issue .comment-list .timeline-item .badge {
-    background-color: var(--accent-color);
-    border: 2px solid var(--accent-color);
+    background-color: rgb(var(--accent-color));
+    border: 2px solid rgb(var(--accent-color));
     color: #fff;
 }
 
@@ -1042,8 +1162,8 @@ footer {
 }
 
 .ui.checkbox input:checked~label:after {
-    color: #fff !important;
-    background: var(--accent-color);
+    color: var(--label-text-color) !important;
+    background: rgb(var(--accent-color));
 }
 
 .ui.toggle.checkbox input:checked~label:before {
@@ -1052,7 +1172,7 @@ footer {
 
 .ui.toggle.checkbox input:checked~label,
 .ui.toggle.checkbox label {
-    color: var(--text) !important;
+    color: var(--label-text-color) !important;
 }
 
 .ui.toggle.checkbox label:before,
@@ -1064,7 +1184,7 @@ footer {
 .ui.toggle.checkbox input:focus:checked~label,
 .ui.checkbox input:focus~label,
 .ui.checkbox input:focus~label:after {
-    color: var(--text-hover) !important;
+    color: var(--label-text-color) !important;
 }
 
 .ui.blue.button,
@@ -1159,7 +1279,7 @@ footer {
 
 .ui.basic.blue.button,
 .ui.basic.blue.buttons .button {
-    box-shadow: inset 0 0 0 1px var(--accent-color) !important;
+    box-shadow: inset 0 0 0 1px rgb(var(--accent-color)) !important;
     color: var(--button-text) !important;
 }
 
@@ -1187,7 +1307,7 @@ footer {
 .ui.basic.button:hover,
 .ui.basic.buttons .button:focus,
 .ui.basic.buttons .button:hover {
-    background: rgb(255 255 255 / 8%);
+    background: rgb(0 0 0 / 15%);
     color: var(--button-text);
 }
 
@@ -1216,14 +1336,14 @@ footer {
 .ui.basic.labels .label {
     background: none var(--button-color);
     border: 1px solid rgba(34, 36, 38, .15);
-    color: var(--button-text);
+    color: var(--label-text-color);
 }
 
 .repo-buttons .ui.basic.labels a.label:hover,
 a.ui.basic.label:hover {
     text-decoration: none;
     background: none var(--button-color-hover);
-    color: var(--button-text);
+    color: var(--label-text-color);
     box-shadow: none;
 }
 
@@ -1245,9 +1365,10 @@ a.ui.basic.label:hover {
     color: var(--button-text);
 }
 */
-.ui.label {
-    background-color: rgb(255 255 255 / 10%);
-    color: #fff;
+.ui.label,
+.ui.menu .item>.label {
+    background-color: rgb(var(--accent-color));
+    color: var(--label-text-color);
 }
 
 .ui.labels a.label:hover,
@@ -1258,14 +1379,14 @@ a.ui.label:hover {
 
 .ui .sha.label {
     background: var(--button-color) !important;
-    color: var(--button-text) !important;
+    color: var(--label-text-color) !important;
     border: 1px solid var(--button-color) !important;
 }
 
 a.ui.label:hover,
 a.ui.labels .label:hover {
     background: var(--button-color-hover);
-    color: var(--button-text);
+    color: var(--label-text-color);
 }
 
 .repository #commits-table td.sha .sha.label,
@@ -1288,7 +1409,7 @@ a.ui.labels .label:hover {
 
 .repository.file.list #repo-files-table tbody .svg.octicon-file-directory,
 .repository.file.list #repo-files-table tbody .svg.octicon-file-submodule {
-    color: var(--accent-color);
+    color: rgb(var(--accent-color));
 }
 
 /* FORMS */
@@ -1331,7 +1452,7 @@ input {
 .ui.form input[type=time]:focus,
 .ui.form input[type=url]:focus {
     color: var(--text);
-    border-color: rgb(255 255 255 / 8%);
+    border-color: rgb(0 0 0 / 15%);
     border-radius: .28571429rem;
     background: rgb(0 0 0 / 50%);
     box-shadow: inset 0 0 0 0 rgba(34, 36, 38, .35);
@@ -1394,7 +1515,7 @@ textarea:hover {
 }
 
 .ui.action.input:not([class*="left action"])>input:focus {
-    border-right-color: var(--accent-color);
+    border-right-color: rgb(var(--accent-color));
 }
 
 /* MARKDOWN */
@@ -1440,41 +1561,41 @@ textarea:hover {
 
 /* HIGHLIGHTING */
 ::-webkit-selection {
-    background-color: var(--accent-color) !important;
+    background-color: rgb(var(--accent-color)) !important;
     color: var(--text-hover) !important;
 }
 
 ::-moz-selection {
-    background-color: var(--accent-color) !important;
+    background-color: rgb(var(--accent-color)) !important;
     color: var(--text-hover) !important;
 }
 
 ::selection {
-    background-color: var(--accent-color) !important;
+    background-color: rgb(var(--accent-color)) !important;
     color: var(--text-hover) !important;
 }
 
 textarea::-webkit-selection,
 input::-webkit-selection {
-    background-color: var(--accent-color) !important;
+    background-color: rgb(var(--accent-color)) !important;
     color: var(--text-hover) !important;
 }
 
 textarea::-moz-selection,
 input::-moz-selection {
-    background-color: var(--accent-color) !important;
+    background-color: rgb(var(--accent-color)) !important;
     color: var(--text-hover) !important;
 }
 
 textarea::-moz-selection,
 input::-moz-selection {
-    background-color: var(--accent-color) !important;
+    background-color: rgb(var(--accent-color)) !important;
     color: var(--text-hover) !important;
 }
 
 textarea::selection,
 input::selection {
-    background-color: var(--accent-color) !important;
+    background-color: rgb(var(--accent-color)) !important;
     color: var(--text-hover) !important;
 }
 

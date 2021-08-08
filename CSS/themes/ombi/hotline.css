@@ -13,13 +13,4 @@
 
 /* OMBI HOTLINE THEME */
 @import url(https://theme-park.dev/CSS/themes/ombi/ombi-base.css);
-:root {
-  --main-bg-color: radial-gradient(ellipse at center, #F44336 0%, #0b3161 100%) center center/cover no-repeat fixed;
-  --modal-bg-color: radial-gradient(ellipse at top, #F44336 0%, #0b3161 100%) center center/cover no-repeat fixed;
-  --request-button:#F44336;
-  --request-button-hover: #0b3161;
-  --loading-bar: #F44336 ; 
-  --accent-color: #ff6155;
-  --label-color: rgba(11, 49, 97, 0.75);
-
-}
+@import url(https://theme-park.dev/CSS/variables/hotline.css);

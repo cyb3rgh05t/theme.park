@@ -10,6 +10,15 @@
 /*		   		        Made by @gilbN					 */
 /*			      https://github.com/gilbN/theme.park			 */
 
+:root {
+    --scheme-main-ter: var(--main-bg-color);
+    --text-strong-color: var(--button-text-hover);
+    --border-color: rgb(255 255 255 / 25%);
+    --logo-color: rgb(var(--accent-color));
+    --body-background-color: var(--main-bg-color);
+    --border-hover-color: rgb(var(--accent-color));
+}
+
 * {
     outline: none;
 }
@@ -17,7 +26,25 @@
 html,
 body {
     background: var(--main-bg-color) !important;
-    color: var(--text-color);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
+    color: var(--text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+section header,
+.menu-label {
+    color: var(--text-hover) !important;
 }
 
 
@@ -51,16 +78,17 @@ html.has-custom-scrollbars section main {
 /* Text important */
 p,
 .menu-list a {
-    color: var(--text-color) !important;
+    color: var(--text) !important;
 
 }
 
 .panel-heading {
     background-color: rgb(var(--accent-color));
+    color: var(--label-text-color) !important;
 }
 
 .panel-block {
-    color: var(--text-color);
+    color: var(--text);
 }
 
 .panel-tabs a.is-active {
@@ -70,7 +98,7 @@ p,
 
 .panel-tabs a {
     border-bottom: 1px solid var(--border-color);
-    color: var(--text-color);
+    color: var(--text);
 }
 
 .panel-tabs a:hover {
@@ -87,13 +115,13 @@ label.panel-block:hover {
 /* Side Menu*/
 .menu-list a:hover {
     background-color: rgba(255, 255, 255, .08);
-    color: var(--text-strong-color);
+    color: var(--text-hover) !important;
 }
 
 .menu-list a.is-active,
 .menu-list a.is-active:hover {
     background-color: rgb(var(--accent-color));
-    color: #fff !important;
+    color: var(--label-text-color) !important;
 }
 
 .menu-list li:hover .column-icon:hover {
@@ -109,6 +137,13 @@ li.exited a {
 .input,
 .dropdown-content {
     background: var(--modal-bg-color);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
     border-color: rgba(255, 255, 255, .1);
     border-radius: 4px;
     color: var(--text-strong-color);
@@ -180,6 +215,17 @@ section .is-scrollbar-notification button {
 }
 
 .is-settings-control:hover {
+    border-color: var(--button-color-hover) !important;
+    background: var(--button-color-hover) !important;
+    color: var(--button-text-hover) !important;
+}
+
+#hide-nav {
+    background: var(--button-color) !important;
+    color: var(--button-text) !important;
+}
+
+#hide-nav:hover {
     border-color: var(--button-color-hover) !important;
     background: var(--button-color-hover) !important;
     color: var(--button-text-hover) !important;

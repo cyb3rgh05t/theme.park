@@ -1,4 +1,4 @@
-<img src="/banners/tp_banner.png"/>
+<img src="banners/tp_banner.png"/>
 
 [![Docs](https://img.shields.io/static/v1.svg?color=009688&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=theme-park.dev&message=Docs)](https://docs.theme-park.dev "Documentation for all the themes in this repository.")
 [![Discord](https://img.shields.io/discord/591352397830553601.svg?color=009688&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=Discord&logo=discord)](https://discord.gg/HM5uUKU "Discord for theme installation support")
@@ -21,18 +21,23 @@
 
 <p align="center">Click on the banners for screenshots.</p>
 
-<a href="https://docs.theme-park.dev/colors/organizr-dark"><img src="/banners/organizr_dark_banner.png" alt="Organizr-Dark"/></a>
-<a href="https://docs.theme-park.dev/colors/aquamarine"><img src="/banners/aquamarine_banner.png" alt="Aquamarine"/></a>
-<a href="https://docs.theme-park.dev/colors/hotline"><img src="/banners/hotline_banner.png" alt="Hotline"/></a>
-<a href="https://docs.theme-park.dev/colors/space-gray"><img src="/banners/spacegray_banner.png" alt="Space-Gray"/></a>
-<a href="https://docs.theme-park.dev/colors/dark"><img src="/banners/dark_banner.png" alt="Dark"/></a>
-<a href="https://docs.theme-park.dev/colors/plex"><img src="/banners/plex_banner.png" alt="Plex"/></a>
+<a href="https://docs.theme-park.dev/theme-options/dracula"><img src="https://docs.theme-park.dev/theme-options/dracula_banner.png" alt="Dracula"/></a>
+<a href="https://docs.theme-park.dev/theme-options/overseer"><img src="https://docs.theme-park.dev/theme-options/overseer_banner.png" alt="Overseer"/></a>
+<a href="https://docs.theme-park.dev/theme-options/organizr-dark"><img src="https://docs.theme-park.dev/theme-options/organizr dark_banner.png" alt="Organizr-Dark"/></a>
+<a href="https://docs.theme-park.dev/theme-options/aquamarine"><img src="https://docs.theme-park.dev/theme-options/aquamarine_banner.png" alt="Aquamarine"/></a>
+<a href="https://docs.theme-park.dev/theme-options/hotline"><img src="https://docs.theme-park.dev/theme-options/hotline_banner.png" alt="Hotline"/></a>
+<a href="https://docs.theme-park.dev/theme-options/hotpink"><img src="https://docs.theme-park.dev/theme-options/hotpink_banner.png" alt="Hotpink"/></a>
+<a href="https://docs.theme-park.dev/theme-options/space-gray"><img src="https://docs.theme-park.dev/theme-options/space gray_banner.png" alt="Space-Gray"/></a>
+<a href="https://docs.theme-park.dev/theme-options/dark"><img src="https://docs.theme-park.dev/theme-options/dark_banner.png" alt="Dark"/></a>
+<a href="https://docs.theme-park.dev/theme-options/plex"><img src="https://docs.theme-park.dev/theme-options/plex_banner.png" alt="Plex"/></a>
 
 <h2><a href="https://docs.theme-park.dev/setup">Installation</a></h2>
 
 <h2><a href="https://docs.theme-park.dev/themes/addons/sonarr">Addons</a></h2>
 
-<h2><a href="https://docs.theme-park.dev/custom/">Adding your own theme colors</a></h2>
+<h2><a href="https://docs.theme-park.dev/community-themes/">Community Themes</a></h2>
+
+<h2><a href="https://docs.theme-park.dev/custom/">Adding your own theme theme-options</a></h2>
 
 <p align="center">Current themes in the repo</p>
 
@@ -52,39 +57,39 @@
 <p style="text-align: center;"><a href="https://docs.theme-park.dev/themes/lidarr"><img src="https://docs.theme-park.dev/site_assets/lidarr/logo.png" width="48" height="48" /></a></p>
 <p style="text-align: center;"><a href="https://docs.theme-park.dev/themes/lidarr">Lidarr</a></p>
 </td>
-<td style="width: 90px; height: 98px; text-align: center;">
-<p><a href="https://docs.theme-park.dev/themes/bazarr"><img src="https://docs.theme-park.dev/site_assets/bazarr/logo.png" alt="" width="48" height="48" /></a></p>
-<p><a href="https://docs.theme-park.dev/themes/bazarr">Bazarr</a></p>
-</td>
 <td style="width: 136px; height: 98px; text-align: center;">
 <p><a href="https://docs.theme-park.dev/themes/readarr"><img src="https://docs.theme-park.dev/site_assets/readarr/logo.png" alt="" width="48" height="48" /></a></p>
 <p><a href="https://docs.theme-park.dev/themes/readarr">Readarr</a></p>
+</td>
+<td style="width: 110px; height: 26px; text-align: center;">
+<p><a href="https://docs.theme-park.dev/themes/prowlarr"><img src="https://docs.theme-park.dev/site_assets/prowlarr/logo.png" alt="" width="48" height="48" /></a></p>
+<p><a href="https://docs.theme-park.dev/themes/prowlarr">Prowlarr</a></p>
+</td>
+<td style="width: 90px; height: 98px; text-align: center;">
+<p><a href="https://docs.theme-park.dev/themes/bazarr"><img src="https://docs.theme-park.dev/site_assets/bazarr/logo.png" alt="" width="48" height="48" /></a></p>
+<p><a href="https://docs.theme-park.dev/themes/bazarr">Bazarr</a></p>
 </td>
 <td style="width: 140px; height: 98px; text-align: center;">
 <p><a href="https://docs.theme-park.dev/themes/plex"><img src="https://docs.theme-park.dev/site_assets/plex/logo.png" alt="" width="48" height="48" /></a></p>
 <p><a href="https://docs.theme-park.dev/themes/plex">Plex</a></p>
 </td>
-<td style="width: 110px; height: 26px; text-align: center;">
-<p><a href="https://docs.theme-park.dev/themes/calibre-Web"><img src="https://docs.theme-park.dev/site_assets/calibreweb/logo.png" alt="" width="48" height="48" /></a></p>
-<p><a href="https://docs.theme-park.dev/themes/calibre-Web">Calibre-web</a></p>
-</td>
 </tr>
 <tr style="height: 26px;">
 <td style="width: 109px; height: 98px; text-align: center;">
 <p><a href="https://docs.theme-park.dev/themes/jellyfin"><img src="https://docs.theme-park.dev/site_assets/jellyfin/logo.png" alt="" width="48" height="48" /></a></p>
-<p><a href="https://docs.theme-park.dev/themes/jellyfin">Jellyfin/Emby</a></p>
+<p><a href="https://docs.theme-park.dev/themes/jellyfin">Jellyfin</a></p>
 </td>
 <td style="width: 160px; height: 26px; text-align: center;">
-<p><a href="https://docs.theme-park.dev/themes/tautulli"><img src="https://docs.theme-park.dev/site_assets/tautulli/logo.png" alt="" width="48" height="48" /></a></p>
-<p><a href="https://docs.theme-park.dev/themes/tautulli">Tautulli</a></p>
+<p><a href="https://docs.theme-park.dev/themes/emby"><img src="https://docs.theme-park.dev/site_assets/emby/logo.png" alt="" width="48" height="48" /></a></p>
+<p><a href="https://docs.theme-park.dev/themes/emby">Emby</a></p>
 </td>
 <td style="width: 10px; height: 26px; text-align: center;">
 <p><a href="https://docs.theme-park.dev/themes/ombi"><img src="https://docs.theme-park.dev/site_assets/ombi/logo.png" alt="" width="48" height="48" /></a></p>
 <p><a href="https://docs.theme-park.dev/themes/ombi">Ombi</a></p>
 </td>
 <td style="width: 90px; height: 26px; text-align: center;">
-<p><a href="https://docs.theme-park.dev/themes/requestrr"><img src="https://docs.theme-park.dev/site_assets/requestrr/logo.png" alt="" width="48" height="45" /></a></p>
-<p><a href="https://docs.theme-park.dev/themes/requestrr">Requestrr</a></p>
+<p><a href="https://docs.theme-park.dev/themes/tautulli"><img src="https://docs.theme-park.dev/site_assets/tautulli/logo.png" alt="" width="48" height="45" /></a></p>
+<p><a href="https://docs.theme-park.dev/themes/tautulli">Tautulli</a></p>
 </td>
 <td style="width: 136px; height: 26px; text-align: center;">
 <p><a href="https://docs.theme-park.dev/themes/organizr"><img src="https://docs.theme-park.dev/site_assets/organizr/logo.png" alt="" width="48" height="48" /></a></p>
@@ -132,7 +137,7 @@
 <tr style="height: 56px;">
 <td style="width: 110px; height: 56px; text-align: center;">
 <p><a href="https://docs.theme-park.dev/themes/grafana"><img src="https://docs.theme-park.dev/site_assets/grafana/logo.png" alt="" width="48" height="48" /></a></p>
-<p><a href="https://docs.theme-park.dev/themes/grafana">Grafana</a></p>
+<p><a href="https://docs.theme-park.dev/themes/grafana">Grafana (Deprecated)</a></p>
 </td>
 <td style="width: 160px; height: 56px; text-align: center;">
 <p><a href="https://docs.theme-park.dev/themes/netdata"><img src="https://docs.theme-park.dev/site_assets/netdata/logo.png" alt="" width="48" height="48" /></a></p>
@@ -140,11 +145,11 @@
 </td>
 <td style="width: 10px; height: 56px; text-align: center;">
 <p><a href="https://docs.theme-park.dev/themes/monitorr"><img src="https://docs.theme-park.dev/site_assets/monitorr/logo.png" alt="" width="48" height="48" /></a></p>
-<p><a href="https://docs.theme-park.dev/themes/monitorr">Monitorr</a></p>
+<p><a href="https://docs.theme-park.dev/themes/monitorr">Monitorr (Deprecated)</a></p>
 </td>
 <td style="width: 90px; height: 56px; text-align: center;">
 <p><a href="https://docs.theme-park.dev/themes/logarr"><img src="https://docs.theme-park.dev/site_assets/logarr/logo.png" alt="" width="48" height="48" /></a></p>
-<p><a href="https://docs.theme-park.dev/themes/logarr">Logarr</a></p>
+<p><a href="https://docs.theme-park.dev/themes/logarr">Logarr (Deprecated)</a></p>
 </td>
 <td style="width: 136px; height: 56px; text-align: center;">
 <p><a href="https://docs.theme-park.dev/themes/portainer"><img src="https://docs.theme-park.dev/site_assets/portainer/logo.png" alt="" width="48" height="48" /></a></p>
@@ -166,7 +171,7 @@
 </td>
 <td style="width: 160px; height: 40px; text-align: center;">
 <p><a href="https://docs.theme-park.dev/themes/plpp"><img src="https://docs.theme-park.dev/site_assets/plpp/logo.png" alt="" width="48" height="48" /></a></p>
-<p><a href="https://docs.theme-park.dev/themes/plpp">PLPP</a></p>
+<p><a href="https://docs.theme-park.dev/themes/plpp">PLPP (Deprecated)</a></p>
 </td>
 <td style="width: 10px; height: 40px; text-align: center;">
 <p><a href="https://docs.theme-park.dev/themes/librespeed"><img src="https://docs.theme-park.dev/site_assets/librespeed/logo.png" alt="" width="48" height="48" /></a></p>
@@ -174,7 +179,7 @@
 </td>
 <td style="width: 90px; height: 40px; text-align: center;">
 <p><a href="https://docs.theme-park.dev/themes/thelounge"><img src="https://docs.theme-park.dev/site_assets/thelounge/logo.png" alt="" width="48" height="48" /></a></p>
-<p><a href="https://docs.theme-park.dev/themes/thelounge">The Lounge</a></p>
+<p><a href="https://docs.theme-park.dev/themes/thelounge">The Lounge (Deprecated)</a></p>
 </td>
 <td style="width: 90px; height: 40px; text-align: center;">
 <p><a href="https://docs.theme-park.dev/themes/lazylibrarian"><img src="https://docs.theme-park.dev/site_assets/lazylibrarian/logo.png" alt="" width="48" height="48" /></a></p>
@@ -204,7 +209,7 @@
 </td>
 <td style="width: 90px; height: 40px; text-align: center;">
 <p><a href="https://docs.theme-park.dev/themes/webtools"><img src="https://docs.theme-park.dev/site_assets/webtools/logo.png" alt="" width="48" height="48" /></a></p>
-<p><a href="https://docs.theme-park.dev/themes/webtools">Webtools</a></p>
+<p><a href="https://docs.theme-park.dev/themes/webtools">Webtools (Deprecated)</a></p>
 </td>
 <td style="width: 90px; height: 40px; text-align: center;">
 <p><a href="https://docs.theme-park.dev/themes/resilio-sync"><img src="https://docs.theme-park.dev/site_assets/resilio-sync/logo.png" alt="" width="48" height="48" /></a></p>
@@ -233,8 +238,26 @@
 <p><a href="https://docs.theme-park.dev/themes/flood">Flood</a></p>
 </td>
 <td style="width: 90px; height: 40px; text-align: center;">
+<p><a href="https://docs.theme-park.dev/themes/vuetorrent"><img src="https://docs.theme-park.dev/site_assets/vuetorrent/logo.png" alt="" width="48" height="48" /></a></p>
+<p><a href="https://docs.theme-park.dev/themes/vuetorrent">VueTorrent</a></p>
+</td>
+<td style="width: 90px; height: 40px; text-align: center;">
 <p><a href="https://docs.theme-park.dev/themes/dozzle"><img src="https://docs.theme-park.dev/site_assets/dozzle/logo.png" alt="" width="48" height="48" /></a></p>
 <p><a href="https://docs.theme-park.dev/themes/dozzle">Dozzle</a></p>
+</td>
+<td style="width: 110px; height: 26px; text-align: center;">
+<p><a href="https://docs.theme-park.dev/themes/calibreweb"><img src="https://docs.theme-park.dev/site_assets/calibreweb/logo.png" alt="" width="48" height="48" /></a></p>
+<p><a href="https://docs.theme-park.dev/themes/calibreweb">Calibre-web</a></p>
+</td>
+<td style="width: 110px; height: 26px; text-align: center;">
+<p><a href="https://docs.theme-park.dev/themes/xbackbone"><img src="https://docs.theme-park.dev/site_assets/xbackbone/logo.png" alt="" width="48" height="48" /></a></p>
+<p><a href="https://docs.theme-park.dev/themes/xbackbone">Xbackbone</a></p>
+</td>
+</tr>
+<tr>
+<td style="width: 90px; height: 26px; text-align: center;">
+<p><a href="https://docs.theme-park.dev/themes/requestrr"><img src="https://docs.theme-park.dev/site_assets/requestrr/logo.png" alt="" width="48" height="45" /></a></p>
+<p><a href="https://docs.theme-park.dev/themes/requestrr">Requestrr</a></p>
 </td>
 </tr>
 </tbody>

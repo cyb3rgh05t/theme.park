@@ -9,6 +9,14 @@
 
 /*		   		        Made by @gilbN					 */
 /* 			      https://github.com/gilbN/theme.park			 */
+:root {
+    --calendar-in-cinemas: 53, 197, 244;
+    --calendar-downloading: 122 67 182; 
+    --calendar-unmonitored: 173 173 173;
+    --calendar-unaired: 93 156 236;  
+    --calendar-missing: 240 80 80;
+    --calendar-available: 39 194 76;
+  }
 
 body {
     background: var(--main-bg-color);
@@ -109,20 +117,41 @@ a:hover {
 
 /* MODAL */
 [class*="ModalHeader-modalHeader-"] {
-    background: var(--modal-bg-color);
-    color: #fff;
-    border-bottom: var(--accent-color);
+    background: var(--modal-header-color);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
+    color: var(--text-hover);
+    border-bottom: 1px solid rgb(var(--accent-color));
 }
 
 [class*="ModalContent-modalContent-"] {
     background: var(--modal-bg-color);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
     color: var(--text);
 }
 
 [class*="ModalFooter-modalFooter-"] {
-    background: var(--modal-bg-color);
+    background: var(--modal-footer-color);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
     color: #fff;
-    border-top: 1px solid var(--accent-color);
+    border-top: 1px solid rgb(var(--accent-color));
 }
 
 [class*="ModalContent-closeButton-"]:hover {
@@ -157,8 +186,13 @@ a:hover {
 }
 
 [class*="CheckInput-primaryIsChecked-"] {
-    border-color: var(--accent-color) !important;
-    background-color: var(--accent-color) !important;
+    border-color: rgb(var(--accent-color)) !important;
+    background-color: rgb(var(--accent-color)) !important;
+    color: var(--label-text-color) !important;
+}
+
+[class*="CheckInput-input-"][class*="CheckInput-isNotChecked-"] {
+    background: #fff;
 }
 
 /* HEADER */
@@ -181,6 +215,13 @@ a:hover {
 [class*="MovieSearchInput-containerOpen-"] [class*="MovieSearchInput-movieContainer-"] {
     border: none !important;
     background: var(--modal-bg-color);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
     color: #fff !important;
     box-shadow: 0 0 10px 1px transparent !important;
 }
@@ -202,37 +243,44 @@ a:hover {
     background-color: transparent;
 }
 
-[class*="PageSidebarItem-link-"]:hover,
-[class*="PageSidebarItem-link-"]:focus {
-    color: var(--text-hover) !important;
-    background-color: hsla(0, 0%, 100%, .08);
+[class*="PageSidebarItem-link-"]:hover {
+    color: rgb(var(--accent-color));
     text-decoration: none;
 }
 
-[class*="PageSidebarItem-isActiveLink-"] {
-    color: #FFF !important;
-    background-color: hsla(0, 0%, 100%, .08) !important;
+[class*="PageSidebarItem-isActiveLink-"],
+[class*="PageSidebarItem-isActiveLink-"]:hover,
+[class*="PageSidebarItem-link-"]:focus {
+    color: rgb(var(--accent-color)) !important;
 }
 
 [class*="PageSidebarItem-isActiveParentLink-"] {
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.15);
 }
 
 @media only screen and (max-width: 768px) {
     [class*="PageSidebar-sidebarContainer-"] {
         background: var(--main-bg-color) !important;
+        background-repeat: repeat, no-repeat;
+        background-attachment: fixed, fixed;
+        background-position: center center, center center;
+        background-size: auto, cover;
+        -webkit-background-size: auto, cover;
+        -moz-background-size: auto, cover;
+        -o-background-size: auto, cover;
     }
 }
 
 [class*="PageSidebarItem-isActiveItem-"] {
-    border-left: 3px solid var(--accent-color);
+    border-left: 3px solid rgb(var(--accent-color));
 }
 
 /* MOVIES PAGE */
 /* RADARR SPECIFIC */
 [class*="MovieIndexPoster-controls-"] {
-    background-color: #000 !important;
+    background-color: rgb(var(--accent-color)) !important;
 }
+
 [class*="MovieTitlesTableContent-blankpad-"],
 [class*="ExtraFileTableContent-blankpad-"],
 [class*="MovieHistoryTableContent-blankpad-"] {
@@ -271,7 +319,7 @@ a:hover {
 }
 
 [class*=".ProgressBar-purple-"] {
-    background-color: var(--accent-color);
+    background-color: rgb(var(--accent-color));
 }
 
 /* MOVIE PAGE */
@@ -290,8 +338,8 @@ a:hover {
     color: var(--text-hover) !important;
 }
 
-[class*="Icon-default-"]:hover {
-    color: #fff;
+[class*="Icon-default-"]:hover:not([class*="Label-large-"] [class*="Icon-default-"], [class*="PathInput-fileBrowserButton-"]svg) {
+    color: var(--text-hover);
 }
 
 [class*="MonitorToggleButton-toggleButton-"] {
@@ -302,11 +350,13 @@ a:hover {
 [class*="ProtocolLabel-torrent-"] {
     border-color: #00853d !important;
     background-color: #00853d !important;
+    color: #fff !important;
 }
 
 [class*="ProtocolLabel-usenet-"] {
     border-color: #17b1d9 !important;
     background-color: #17b1d9 !important;
+    color: #fff !important;
 }
 
 [class*="MovieDetailsSeason-seasonNumber-"] {
@@ -333,6 +383,13 @@ a:hover {
 [class*="Popover-body-"],
 [class*="Tooltip-body-"] {
     background: var(--modal-bg-color) !important;
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
 }
 
 [class*="Tooltip-tooltipContainer-"] {
@@ -356,8 +413,9 @@ a:hover {
     color: var(--text);
 }
 
-[class*="Label-default-"] [class*="IconButton-button-"]  {
-    color: #eee;
+[class*="Label-default-"] [class*="IconButton-button-"],
+[class*="Label-small-"] [class*="IconButton-button-"]:hover {
+    color: var(--label-text-color);
 }
 
 [class*="IconButton-button-"]:hover {
@@ -365,41 +423,46 @@ a:hover {
     color: var(--text-hover);
 }
 
+[class*="Table-tableContainer-"] [class*="IconButton-button-"]:hover {
+    background-color: transparent;
+    color: var(--text-hover);
+}
+
 [class*="Label-default-"] {
-    border-color: var(--accent-color);
-    background-color: var(--accent-color);
-    color: #fff;
+    border-color: rgb(var(--accent-color));
+    background-color: rgb(var(--accent-color));
+    color: var(--label-text-color);
 }
 
 [class*="Label-info-"] {
-    border-color: var(--accent-color);
-    background-color: var(--accent-color);
-    color: #fff;
+    border-color: rgb(var(--accent-color));
+    background-color: rgb(var(--accent-color));
+    color: var(--label-text-color);
 }
 
 [class*="PageSidebarItem-status-"][class*="Label-info-"] {
-    border-color: var(--queue-color);
-    background-color: var(--queue-color);
-    color: #fff;
+    border-color: var(--arr-queue-color);
+    background-color: var(--arr-queue-color);
+    color: var(--label-text-color);
 }
 
 [class*="MovieDetails-selectedTab-"] {
-    border-bottom: 4px solid var(--accent-color);
+    border-bottom: 4px solid rgb(var(--accent-color));
 }
 
 [class*="MovieDetails-tabList-"] {
-    color: #fff;
+    color: var(--text-hover);
 }
 
 /* Table options*/
 [class*="TableOptionsColumn-column-"] {
     background: rgba(0, 0, 0, .25);
-    color: #FFF;
+    color: var(--text-hover);
     border: none;
 }
 
 [class*="TableHeaderCell-headerCell-"] {
-    color: #fff;
+    color: var(--text-hover);
 }
 
 [class*="Table-table-"] {
@@ -409,6 +472,10 @@ a:hover {
 [class*="TableRow-row-"]:hover {
     background-color: hsla(0, 0%, 100%, .08);
     color: var(--text-hover);
+}
+
+[class*="TableRowCell-cell-"] {
+    border-top: 1px solid rgb(255 255 255 / 25%);
 }
 
 /* TOP MENU SERIES */
@@ -436,11 +503,11 @@ a:hover {
 }
 
 [class*="PageToolbarButton-toolbarButton-"]:hover {
-    color: var(--text-hover);
+    color: rgb(var(--accent-color));
 }
 
 [class*="MenuButton-menuButton-"]:hover {
-    color: var(--text-hover);
+    color: rgb(var(--accent-color));
 }
 
 /* POSTERS */
@@ -450,13 +517,20 @@ a:hover {
 [class*="MovieIndexPosterInfo-info-"],
 [class*="MovieCreditPoster-title-"] {
     background-color: rgba(255, 255, 255, 0.08);
-    color: var(--text);
+    color: var(--text-hover);
 }
 
 /* LIBRARY TOP HEADER DROPDOWN */
 [class*="MenuItem-menuItem-"],
 [class*="MenuContent-menuContent-"] {
-    background: var(--modal-bg-color);
+    background: var(--drop-down-menu-bg);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
     color: var(--text);
 }
 
@@ -496,12 +570,21 @@ a:hover {
 [class*="EnhancedSelectInput-options-"] {
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 4px;
-    background: var(--modal-bg-color);
+    background: var(--drop-down-menu-bg);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
     color: var(--text);
 }
+
 [class*="EnhancedSelectInputOption-isSelected-"],
 [class*="EnhancedSelectInputOption-isSelected-"]:hover {
     background-color: rgba(255, 255, 255, 0.20) !important;
+    color: var(--text-hover);
 }
 
 [class*="EnhancedSelectInputOption-option-"]:hover {
@@ -518,7 +601,7 @@ a:hover {
 [class*="CheckInput-isIndeterminate-"] {
     border: none;
     background-color: rgba(255, 255, 255, 0.08);
-    color: #FFF
+    color: #fff;
 }
 
 [class*="MovieSearchInput-container-"] [class*="Input-input-"] {
@@ -557,7 +640,7 @@ a:hover {
 
 [class*="PageContentBody-innerContentBody-"],
 [class*="PageContentBody-contentBody-"],
-.react-tabs__tab-panel .react-tabs__tab-panel--selected > div {
+.react-tabs__tab-panel .react-tabs__tab-panel--selected>div {
     color: var(--text);
 }
 
@@ -581,24 +664,52 @@ a:hover {
     color: #fff;
 }
 
+[class*="RootFolderSelectInputOption-freeSpace-"],
+[class*="RootFolderSelectInputOption-movieFolder-"] {
+    color: var(--text-muted);
+}
+
 /* MOVE THIS */
-::placeholder {
+input::-webkit-input-placeholder {
     color: var(--text);
 }
 
-:-ms-input-placeholder {
-    color: var(--text)
+input:focus::-webkit-input-placeholder {
+    color: var(--text-hover);
 }
 
-::-webkit-input-placeholder {
+/* Firefox < 19 */
+input:-moz-placeholder {
     color: var(--text);
+}
+
+input:focus:-moz-placeholder {
+    color: var(--text-hover);
+}
+
+/* Firefox > 19 */
+input::-moz-placeholder {
+    color: var(--text);
+}
+
+input:focus::-moz-placeholder {
+    color: var(--text-hover);
+}
+
+/* Internet Explorer 10 */
+input:-ms-input-placeholder {
+    color: var(--text);
+}
+
+input:focus:-ms-input-placeholder {
+    color: var(--text-hover);
 }
 
 /* IMPORT */
 
 [class*="FieldSet-legend-"] {
-    color: #FFF;
-    border-bottom: 1px solid var(--accent-color);
+    color: var(--text-hover);
+    border-bottom: 1px solid rgb(var(--accent-color));
 }
 
 [class*="VirtualTableRow-row-"]:hover {
@@ -615,6 +726,13 @@ a:hover {
 [class*="ImportMovieSelectMovie-searchIconContainer-"] {
     border: none;
     background: var(--modal-bg-color);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
     color: white;
 }
 
@@ -634,6 +752,12 @@ a:hover {
 [class*="DiscoverMovieOverview-link-"]:hover {
     color: var(--text-hover);
     text-decoration: none;
+}
+
+[class*="DiscoverMoviePoster-title-"],
+[class*="DiscoverMoviePosterInfo-info-"] {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--text-hover);
 }
 
 /*Title*/
@@ -674,7 +798,7 @@ a:hover {
     border-left-color: transparent !important;
 }
 
-[class*="CalendarEvent-downloaded-"]:hover {
+[class*="Calendar-calendar-"] [class*="CalendarEvent-downloaded-"]:hover {
     background: rgb(var(--calendar-available) / .5) !important;
     border-left-color: transparent !important;
 }
@@ -684,7 +808,7 @@ a:hover {
     border-left-color: transparent !important;
 }
 
-[class*="CalendarEvent-missing-"]:hover {
+[class*="Calendar-calendar-"] [class*="CalendarEvent-missing-"]:hover {
     background: rgba(var(--calendar-missing) / .5) !important;
     border-left-color: transparent !important;
 }
@@ -694,7 +818,7 @@ a:hover {
     border-left-color: transparent !important;
 }
 
-[class*="CalendarEvent-unreleased-"]:hover {
+[class*="Calendar-calendar-"] [class*="CalendarEvent-unreleased-"]:hover {
     background: rgb(var(--calendar-unaired) / .5) !important;
     border-left-color: transparent !important;
 }
@@ -704,7 +828,7 @@ a:hover {
     border-left-color: transparent !important;
 }
 
-[class*="CalendarEvent-unmonitored-"]:hover {
+[class*="Calendar-calendar-"] [class*="CalendarEvent-unmonitored-"]:hover {
     background: rgb(var(--calendar-unmonitored) / .5) !important;
     border-left-color: transparent !important;
 }
@@ -714,7 +838,7 @@ a:hover {
     border-left-color: transparent !important;
 }
 
-[class*="CalendarEvent-downloading-"]:hover {
+[class*="Calendar-calendar-"] [class*="CalendarEvent-downloading-"]:hover {
     background: rgb(var(--calendar-downloading) / .5) !important;
     border-left-color: transparent !important;
 }
@@ -777,12 +901,21 @@ a:hover {
 }
 
 /* SETTINGS */
-[class*="PageContentBody-innerContentBody-"] [class*="Link-to-"] {
-    color: #fff;
+[class*="Settings-link-"] {
+    color: var(--text-hover);
+    border-bottom: 1px solid rgb(var(--accent-color));
 }
 
 [class*="Settings-summary-"] {
     color: var(--text);
+}
+
+[class*="FormLabel-large-"] {
+    color: var(--text-hover);
+}
+
+[class*="FormLabel-isAdvanced-"] {
+    color: #ff902b;
 }
 
 /* MEDIA MANAGEMENT - FILE NAME TOKENS */
@@ -831,7 +964,6 @@ a:hover {
 [class*="ReleaseProfiles-center-"] {
     background-color: transparent;
     border: none;
-    color: var(--text);
 }
 
 [class*="QualityProfileItem-qualityProfileItem-"],
@@ -858,32 +990,32 @@ a:hover {
     background: rgba(0, 0, 0, .25);
 }
 
+[class*="QualityDefinitions-sizeLimitHelpText-"] {
+    color: var(--text);
+}
+
 /* PROFILES */
 [class*="Indexers-center-"] {
     background-color: transparent;
     border: none;
-    color: var(--text);
 }
 
 /* DOWNLOAD CLIENTS */
 [class*="DownloadClients-center-"] {
     background-color: transparent;
     border: none;
-    color: var(--text);
 }
 
 /* CONNECTIONS */
 [class*="Notifications-center-"] {
     background-color: transparent;
     border: none;
-    color: var(--text);
 }
 
 /* LISTS */
 [class*="ImportLists-center-"] {
     background-color: transparent;
     border: none;
-    color: var(--text);
 }
 
 /* LOG */
@@ -925,6 +1057,33 @@ a:hover {
 
 .forgot-password {
     color: var(--text) !important;
+}
+
+input[type=email],
+input[type=password] {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #FFF;
+}
+
+.button {
+    border-color: var(--button-color);
+    background-color: var(--button-color);
+    cursor: pointer;
+}
+
+.button:hover {
+    border-color: var(--button-color-hover);
+    background-color: var(--button-color-hover);
+    color: #fff;
+    text-decoration: none;
+}
+
+.form-input:focus {
+    outline: 0;
+    border-color: #fff;
+    box-shadow: none;
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
 /* Custom filter */

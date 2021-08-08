@@ -13,16 +13,4 @@
 
 /* ADGUARD DARK THEME */
 @import url(https://theme-park.dev/CSS/themes/adguard/adguard-base.css);
-:root {
-  --main-bg-color: radial-gradient(circle, #3a3a3a, #2d2d2d, #202020, #141414, #000000) center center/cover no-repeat fixed;
-  --modal-bg-color: radial-gradient(circle , #3a3a3a, #2d2d2d, #202020, #141414, #000000) center center/cover no-repeat fixed;
-
-  --button-color: hsla(0,0%,100%,.15);
-  --button-color-hover: hsla(0,0%,100%,.30);
-  --accent-color:  rgba(255, 255, 255, 0.25);
-  --accent-color-hover: rgba(255, 255, 255, 0.45);
-  --tooltip-bg: #1f1f1f;
-  --tooltip-link-color: #f1c40f;
-  --text: #eee;
-  --text-hover: #fff;
-}
+@import url(https://theme-park.dev/CSS/variables/dark.css);

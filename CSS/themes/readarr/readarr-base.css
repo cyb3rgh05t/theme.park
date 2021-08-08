@@ -10,6 +10,15 @@
 /*		   		        Made by @gilbN					 */
 /* 			      https://github.com/gilbN/theme.park			 */
 
+:root {
+    --calendar-downloading: 122 67 182;
+    --calendar-downloaded: 39 194 76;
+    --calendar-unreleased: 93 156 236;
+    --calendar-partial: 255, 165, 0;  
+    --calendar-unmonitored: 173 173 173;
+    --calendar-missing: 240 80 80; 
+  }
+
 body {
     background: var(--main-bg-color);
     background-repeat: repeat, no-repeat;
@@ -109,22 +118,43 @@ a:hover {
 
 /* MODAL */
 [class*="ModalHeader-modalHeader-"] {
-    background: var(--modal-bg-color);
-    color: #fff;
-    border-bottom: var(--accent-color);
+    background: var(--modal-header-color);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
+    color: var(--text-hover);
+    border-bottom: 1px solid rgb(var(--accent-color));
 }
 
 [class*="Modal-large-"],
 [class*="Modal-modal-"],
 [class*="ModalContent-modalContent-"] {
     background: var(--modal-bg-color);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
     color: var(--text);
 }
 
 [class*="ModalFooter-modalFooter-"] {
-    background: var(--modal-bg-color);
+    background: var(--modal-footer-color);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
     color: #fff;
-    border-top: 1px solid var(--accent-color);
+    border-top: 1px solid rgb(var(--accent-color));
 }
 
 [class*="ModalContent-closeButton-"]:hover {
@@ -159,8 +189,13 @@ a:hover {
 }
 
 [class*="CheckInput-primaryIsChecked-"] {
-    border-color: var(--accent-color) !important;
-    background-color: var(--accent-color) !important;
+    border-color: rgb(var(--accent-color)) !important;
+    background-color: rgb(var(--accent-color)) !important;
+    color: var(--label-text-color) !important;
+}
+
+[class*="CheckInput-input-"][class*="CheckInput-isNotChecked-"] {
+    background: #fff;
 }
 
 /* HEADER */
@@ -176,35 +211,42 @@ a:hover {
 }
 
 /* LIDARR SPECIFIC */
-[class*="ArtistSearchInput-sectionTitle-"] {
+[class*="AuthorSearchInput-sectionTitle-"] {
     color: #fff;
 }
 
-[class*="ArtistSearchInput-containerOpen-"] [class*="ArtistSearchInput-artistContainer-"] {
+[class*="AuthorSearchInput-containerOpen-"] [class*="AuthorSearchInput-authorContainer-"] {
     border: none !important;
     background: var(--modal-bg-color);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
     color: #fff !important;
     box-shadow: 0 0 10px 1px transparent !important;
 }
 
-[class*="ArtistSearchInput-highlighted-"] {
+[class*="AuthorSearchInput-highlighted-"] {
     background-color: hsla(0, 0%, 100%, .08)
 }
 
-[class*"=ArtistSearchInput-artistContainer-"]::-webkit-scrollbar-thumb,
-[class*="ImportArtistSelectArtist-results-"]::-webkit-scrollbar-thumb {
+[class*"=AuthorSearchInput-authorContainer-"]::-webkit-scrollbar-thumb,
+[class*="ImportAuthorSelectAuthor-results-"]::-webkit-scrollbar-thumb {
     background-color: rgba(255, 255, 255, 0.25);
 }
 
 /* MINI RIGHT SCROLL BAR */
 [class*="OverlayScroller-thumb-"],
-[class*="ImportArtistSelectArtist-results-"]::-webkit-scrollbar-thumb,
+[class*="ImportAuthorSelectAuthor-results-"]::-webkit-scrollbar-thumb,
 [class*="Scroller-scroller-"]::-webkit-scrollbar-thumb {
     background-color: hsla(0, 0%, 100%, .08) !important;
 }
 
 [class*="OverlayScroller-thumb-"]:hover,
-[class*="ImportArtistSelectArtist-results-"]::-webkit-scrollbar-thumb:hover,
+[class*="ImportAuthorSelectAuthor-results-"]::-webkit-scrollbar-thumb:hover,
 [class*="Scroller-scroller-"]::-webkit-scrollbar-thumb:hover {
     background-color: rgba(255, 255, 255, 0.25) !important;
 }
@@ -213,13 +255,21 @@ a:hover {
 [class*="EnhancedSelectInput-options-"] {
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 4px;
-    background: var(--modal-bg-color);
+    background: var(--drop-down-menu-bg);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
     color: var(--text);
 }
 
 [class*="EnhancedSelectInputOption-isSelected-"],
 [class*="EnhancedSelectInputOption-isSelected-"]:hover {
     background-color: rgba(255, 255, 255, 0.20) !important;
+    color: var(--text-hover);
 }
 
 [class*="EnhancedSelectInputOption-option-"]:hover {
@@ -240,55 +290,61 @@ a:hover {
     background-color: transparent;
 }
 
-[class*="PageSidebarItem-link-"]:hover,
-[class*="PageSidebarItem-link-"]:focus {
-    color: var(--text-hover) !important;
-    background-color: hsla(0, 0%, 100%, .08);
+[class*="PageSidebarItem-link-"]:hover {
+    color: rgb(var(--accent-color));
     text-decoration: none;
 }
 
-[class*="PageSidebarItem-isActiveLink-"] {
-    color: #FFF !important;
-    background-color: hsla(0, 0%, 100%, .08) !important;
+[class*="PageSidebarItem-isActiveLink-"],
+[class*="PageSidebarItem-isActiveLink-"]:hover,
+[class*="PageSidebarItem-link-"]:focus {
+    color: rgb(var(--accent-color)) !important;
 }
 
 [class*="PageSidebarItem-isActiveParentLink-"] {
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.15);
 }
 
 @media only screen and (max-width: 768px) {
     [class*="PageSidebar-sidebarContainer-"] {
         background: var(--main-bg-color) !important;
+        background-repeat: repeat, no-repeat;
+        background-attachment: fixed, fixed;
+        background-position: center center, center center;
+        background-size: auto, cover;
+        -webkit-background-size: auto, cover;
+        -moz-background-size: auto, cover;
+        -o-background-size: auto, cover;
     }
 }
 
 [class*="PageSidebarItem-isActiveItem-"] {
-    border-left: 3px solid var(--accent-color);
+    border-left: 3px solid rgb(var(--accent-color));
 }
 
 /* LIBRARY PAGE */
 /* LIDARR SPECIFIC */
-[class*="ArtistIndexPoster-controls-"] {
-    background-color: #000 !important;
+[class*="AuthorIndexPoster-controls-"] {
+    background-color: rgb(var(--accent-color)) !important;
 }
 
 /* OVERVIEW PAGE */
 
 /* OVERVIEW PAGE */
-[class*="ArtistIndexOverview-container-"],
-[class*="ArtistIndexOverview-container-"]:hover {
+[class*="AuthorIndexOverview-container-"],
+[class*="AuthorIndexOverview-container-"]:hover {
     background-color: transparent !important;
 }
 
-[class*="ArtistIndexOverview-container-"]:hover [class*="ArtistIndexOverview-content-"] {
+[class*="AuthorIndexOverview-container-"]:hover [class*="AuthorIndexOverview-content-"] {
     background-color: transparent;
 }
 
-[class*="ArtistIndexOverview-content-"]:hover {
+[class*="AuthorIndexOverview-content-"]:hover {
     background-color: hsla(0, 0%, 100%, .08) !important;
 }
 
-[class*="ArtistIndexOverview-link-"]:hover {
+[class*="AuthorIndexOverview-link-"]:hover {
     text-decoration: none;
 }
 
@@ -297,21 +353,21 @@ a:hover {
 }
 
 [class*=".ProgressBar-purple-"] {
-    background-color: var(--accent-color);
+    background-color: rgb(var(--accent-color));
 }
 
 
 /*ARTIST PAGE*/
-[class*="ArtistDetailsSeason-albumType-"],
-[class*="ArtistDetailsSeason-collapseButtonContainer-"] {
+[class*="AuthorDetailsSeason-albumType-"],
+[class*="AuthorDetailsSeason-collapseButtonContainer-"] {
     border: none !important;
     background-color: rgba(0, 0, 0, .25) !important;
 }
 
-[class*="ArtistDetailsSeason-header-"],
-[class*="ArtistDetailsSeason-albumCount-"],
-[class*="ArtistDetails-metadataMessage-"],
-[class*="ArtistDetailsSeason-albumCount-"] {
+[class*="AuthorDetailsSeason-header-"],
+[class*="AuthorDetailsSeason-albumCount-"],
+[class*="AuthorDetails-metadataMessage-"],
+[class*="AuthorDetailsSeason-albumCount-"] {
     color: #fff;
 }
 
@@ -320,13 +376,13 @@ a:hover {
 }
 
 [class*="Label-default-"] {
-    border-color: var(--accent-color);
-    background-color: var(--accent-color);
-    color: #fff;
+    border-color: rgb(var(--accent-color));
+    background-color: rgb(var(--accent-color));
+    color: var(--label-text-color);
 }
 
-[class*="Icon-default-"]:hover {
-    color: #fff;
+[class*="Icon-default-"]:hover:not([class*="Label-large-"] [class*="Icon-default-"], [class*="PathInput-fileBrowserButton-"]svg) {
+    color: var(--text-hover);
 }
 
 [class*="MonitorToggleButton-toggleButton-"] {
@@ -336,11 +392,13 @@ a:hover {
 [class*="ProtocolLabel-torrent-"] {
     border-color: #00853d !important;
     background-color: #00853d !important;
+    color: #fff !important;
 }
 
 [class*="ProtocolLabel-usenet-"] {
     border-color: #17b1d9 !important;
     background-color: #17b1d9 !important;
+    color: #fff !important;
 }
 
 /*ARTIST ALBUM PAGE*/
@@ -359,7 +417,7 @@ a:hover {
 }
 
 [class*="AlbumDetails-selectedTab-"] {
-    border-bottom: 4px solid var(--accent-color);
+    border-bottom: 4px solid rgb(var(--accent-color));
 }
 
 [class*="AlbumDetailsMedium-collapseButtonContainer-"] {
@@ -367,12 +425,12 @@ a:hover {
     background-color: rgba(0, 0, 0, .25);
 }
 
-[class*="ArtistIndexProgressBar-progress-"] {
+[class*="AuthorIndexProgressBar-progress-"] {
     background-color: hsla(0, 0%, 100%, .08);
 }
 
-[class*="ArtistIndexBanner-title-"],
-[class*="ArtistIndexBannerInfo-info-"] {
+[class*="AuthorIndexBanner-title-"],
+[class*="AuthorIndexBannerInfo-info-"] {
     background-color: rgba(0, 0, 0, .25);
     color: #fff;
 }
@@ -382,6 +440,13 @@ a:hover {
 [class*="Popover-body-"],
 [class*="Tooltip-body-"] {
     background: var(--modal-bg-color) !important;
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
 }
 
 [class*="Tooltip-tooltipContainer-"] {
@@ -405,32 +470,51 @@ a:hover {
     color: var(--text);
 }
 
+[class*="Label-default-"] [class*="IconButton-button-"],
+[class*="Label-small-"] [class*="IconButton-button-"]:hover {
+    color: var(--label-text-color);
+}
+
 [class*="IconButton-button-"]:hover {
+    background-color: transparent;
+    color: var(--label-text-color);
+}
+
+[class*="AuthorDetailsHeader-monitorToggleButton-"]:hover,
+[class*="AuthorDetails-authorNavigationButton-"]:hover,
+[class*="AuthorDetails-authorUpButton-"]:hover,
+[class*="BookDetailsHeader-monitorToggleButton-1F9Pp"]:hover,
+[class*="BookDetails-bookUpButton-"]:hover,
+[class*="BookDetails-bookNavigationButton-"]:hover {
+    color: var(--text-hover);
+}
+
+[class*="Table-tableContainer-"] [class*="IconButton-button-"]:hover {
     background-color: transparent;
     color: var(--text-hover);
 }
 
 [class*="Label-info-"] {
-    border-color: var(--accent-color);
-    background-color: var(--accent-color);
+    border-color: rgb(var(--accent-color));
+    background-color: rgb(var(--accent-color));
     color: #fff;
 }
 
 [class*="PageSidebarItem-status-"][class*="Label-info-"] {
-    border-color: var(--queue-color);
-    background-color: var(--queue-color);
+    border-color: var(--arr-queue-color);
+    background-color: var(--arr-queue-color);
     color: #fff;
 }
 
 /* Table options*/
 [class*="TableOptionsColumn-column-"] {
     background: rgba(0, 0, 0, .25);
-    color: #FFF;
+    color: var(--text-hover);
     border: none;
 }
 
 [class*="TableHeaderCell-headerCell-"] {
-    color: #fff;
+    color: var(--text-hover);
 }
 
 [class*="Table-table-"] {
@@ -440,6 +524,10 @@ a:hover {
 [class*="TableRow-row-"]:hover {
     background-color: hsla(0, 0%, 100%, .08);
     color: var(--text-hover);
+}
+
+[class*="TableRowCell-cell-"] {
+    border-top: 1px solid rgb(255 255 255 / 25%);
 }
 
 /* TOP MENU SERIES */
@@ -467,25 +555,32 @@ a:hover {
 }
 
 [class*="PageToolbarButton-toolbarButton-"]:hover {
-    color: var(--text-hover);
+    color: rgb(var(--accent-color));
 }
 
 [class*="MenuButton-menuButton-"]:hover {
-    color: var(--text-hover);
+    color: rgb(var(--accent-color));
 }
 
 /* POSTERS */
-[class*="ArtistIndexPoster-title-"],
-[class*="ArtistIndexPosterInfo-info-"] {
+[class*="AuthorIndexPoster-title-"],
+[class*="AuthorIndexPosterInfo-info-"] {
     background-color: rgba(255, 255, 255, 0.08);
-    color: var(--text);
+    color: var(--text-hover);
 }
 
 
 /* TOP HEADER DROPDOWN */
 [class*="MenuItem-menuItem-"],
 [class*="MenuContent-menuContent-"] {
-    background: var(--modal-bg-color);
+    background: var(--drop-down-menu-bg);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
     color: var(--text);
 }
 
@@ -511,24 +606,24 @@ a:hover {
 
 /* SEARCH BAR */
 [class*="Input-input-"],
-[class*="AddNewArtist-searchIconContainer-"],
+[class*="AddNewItem-searchIconContainer-"],
 [class*="CheckInput-isIndeterminate-"] {
     border: none;
     background-color: rgba(255, 255, 255, 0.08);
-    color: #FFF
+    color: #fff;
 }
 
-[class*="ArtistSearchInput-container-"] [class*="Input-input-"] {
+[class*="AuthorSearchInput-input-"][class*="Input-input-"] {
     background: transparent;
     border-bottom: solid 1px #fff;
 }
 
-[class*="ArtistSearchInput-container-"] [class*="Input-input-"]:focus {
+[class*="AuthorSearchInput-input-"][class*="Input-input-"]:focus {
     border-bottom: none;
     background: transparent;
 }
 
-[class*="ArtistSearchResult-alternateTitle-"] {
+[class*="AuthorSearchResult-alternateTitle-"] {
     color: #ffffff;
     font-size: 12px;
 }
@@ -553,18 +648,18 @@ a:hover {
 }
 
 /* SEARCH RESULTS */
-[class*="AddNewArtistSearchResult-year-"] {
+[class*="AddNewAuthorSearchResult-year-"] {
     color: #fff;
 }
 
-[class*="AddNewArtistSearchResult-searchResult-"],
-[class*="AddNewArtistSearchResult-underlay-"],
+[class*="AddNewAuthorSearchResult-searchResult-"],
+[class*="AddNewAuthorSearchResult-underlay-"],
 [class*="AddNewAlbumSearchResult-underlay-"] {
     background-color: transparent;
 }
 
-[class*="AddNewArtistSearchResult-searchResult-"]:hover,
-[class*="AddNewArtistSearchResult-underlay-"]:hover,
+[class*="AddNewAuthorSearchResult-searchResult-"]:hover,
+[class*="AddNewAuthorSearchResult-underlay-"]:hover,
 [class*="AddNewAlbumSearchResult-underlay-"]:hover {
     background-color: hsla(0, 0%, 100%, .08);
     color: inherit;
@@ -575,38 +670,72 @@ a:hover {
     color: #fff;
 }
 
+[class*="RootFolderSelectInputOption-freeSpace-"] {
+    color: var(--text-muted);
+}
+
 /* IMPORT ARTIST */
-[class*="ImportArtistSelectArtist-content-"],
-[class*="ImportArtistSelectArtist-searchIconContainer-"] {
+[class*="ImportAuthorSelectAuthor-content-"],
+[class*="ImportAuthorSelectAuthor-searchIconContainer-"] {
     background: var(--modal-bg-color);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
     color: #FFF;
     border: 1px solid transparent;
 }
 
-[class*="ImportArtistName-disambiguation-"] {
+[class*="ImportAuthorName-disambiguation-"] {
     color: var(--text-muted);
 }
 
-[class*="ImportArtistSearchResult-artist-"]:hover {
+[class*="ImportAuthorSearchResult-author-"]:hover {
     background-color: rgba(255, 255, 255, 0.08);
 }
 
 /* MOVE THIS */
-::placeholder {
+input::-webkit-input-placeholder {
     color: var(--text);
 }
 
-:-ms-input-placeholder {
-    color: var(--text)
+input:focus::-webkit-input-placeholder {
+    color: var(--text-hover);
 }
 
-::-webkit-input-placeholder {
+/* Firefox < 19 */
+input:-moz-placeholder {
     color: var(--text);
+}
+
+input:focus:-moz-placeholder {
+    color: var(--text-hover);
+}
+
+/* Firefox > 19 */
+input::-moz-placeholder {
+    color: var(--text);
+}
+
+input:focus::-moz-placeholder {
+    color: var(--text-hover);
+}
+
+/* Internet Explorer 10 */
+input:-ms-input-placeholder {
+    color: var(--text);
+}
+
+input:focus:-ms-input-placeholder {
+    color: var(--text-hover);
 }
 
 /* IMPORT */
 /* Text color */
-[class*="ImportArtistSelectFolder-header-"] {
+[class*="ImportAuthorSelectFolder-header-"] {
     color: #FFF;
 }
 
@@ -617,7 +746,7 @@ a:hover {
 
 /* IMPORT NEW ARTIST */
 /* Drop down menu/button*/
-[class*="ImportArtistSelectArtist-button-"] {
+[class*="ImportAuthorSelectAuthor-button-"] {
     border: none;
     background-color: rgba(0, 0, 0, 0.25) !important;
     color: #fff;
@@ -627,8 +756,8 @@ a:hover {
 /* IMPORT */
 
 [class*="FieldSet-legend-"] {
-    color: #FFF;
-    border-bottom: 1px solid var(--accent-color);
+    color: var(--text-hover);
+    border-bottom: 1px solid rgb(var(--accent-color));
 }
 
 [class*="VirtualTableRow-row-"]:hover {
@@ -660,7 +789,7 @@ a:hover {
     border-left-color: transparent !important;
 }
 
-[class*="CalendarEvent-downloaded-"]:hover {
+[class*="Calendar-calendar-"] [class*="CalendarEvent-downloaded-"]:hover {
     background: rgb(var(--calendar-available) / .5) !important;
     border-left-color: transparent !important;
 }
@@ -670,7 +799,7 @@ a:hover {
     border-left-color: transparent !important;
 }
 
-[class*="CalendarEvent-missing-"]:hover {
+[class*="Calendar-calendar-"] [class*="CalendarEvent-missing-"]:hover {
     background: rgba(var(--calendar-missing) / .5) !important;
     border-left-color: transparent !important;
 }
@@ -680,7 +809,7 @@ a:hover {
     border-left-color: transparent !important;
 }
 
-[class*="CalendarEvent-unreleased-"]:hover {
+[class*="Calendar-calendar-"] [class*="CalendarEvent-unreleased-"]:hover {
     background: rgb(var(--calendar-unaired) / .5) !important;
     border-left-color: transparent !important;
 }
@@ -690,7 +819,7 @@ a:hover {
     border-left-color: transparent !important;
 }
 
-[class*="CalendarEvent-unmonitored-"]:hover {
+[class*="Calendar-calendar-"] [class*="CalendarEvent-unmonitored-"]:hover {
     background: rgb(var(--calendar-unmonitored) / .5) !important;
     border-left-color: transparent !important;
 }
@@ -700,7 +829,7 @@ a:hover {
     border-left-color: transparent !important;
 }
 
-[class*="CalendarEvent-downloading-"]:hover {
+[class*="Calendar-calendar-"] [class*="CalendarEvent-downloading-"]:hover {
     background: rgb(var(--calendar-downloading) / .5) !important;
     border-left-color: transparent !important;
 }
@@ -744,12 +873,21 @@ a:hover {
 }
 
 /* SETTINGS */
-[class*="PageContentBody-innerContentBody-"] [class*="Link-to-"] {
-    color: #fff;
+[class*="Settings-link-"] {
+    color: var(--text-hover);
+    border-bottom: 1px solid rgb(var(--accent-color));
 }
 
 [class*="Settings-summary-"] {
     color: var(--text);
+}
+
+[class*="FormLabel-large-"] {
+    color: var(--text-hover);
+}
+
+[class*="FormLabel-isAdvanced-"] {
+    color: #ff902b;
 }
 
 /* MEDIA MANAGEMENT - FILE NAME TOKENS */
@@ -798,7 +936,6 @@ a:hover {
 [class*="ReleaseProfiles-center-"] {
     background-color: transparent;
     border: none;
-    color: var(--text);
 }
 
 [class*="QualityProfileItem-qualityProfileItem-"],
@@ -825,11 +962,14 @@ a:hover {
     background: rgba(0, 0, 0, .25);
 }
 
+[class*="QualityDefinitions-sizeLimitHelpText-"] {
+    color: var(--text);
+}
+
 /* PROFILES */
 [class*="Indexers-center-"] {
     background-color: transparent;
     border: none;
-    color: var(--text);
 }
 
 [class*="Card-card-"],
@@ -845,7 +985,6 @@ a:hover {
 [class*="RootFolders-center-"] {
     background-color: transparent;
     border: none;
-    color: var(--text);
 }
 
 [class*="RootFolders-center-"] {
@@ -866,21 +1005,18 @@ a:hover {
 [class*="DownloadClients-center-"] {
     background-color: transparent;
     border: none;
-    color: var(--text);
 }
 
 /* CONNECTIONS */
 [class*="Notifications-center-"] {
     background-color: transparent;
     border: none;
-    color: var(--text);
 }
 
 /* LISTS */
 [class*="ImportLists-center-"] {
     background-color: transparent;
     border: none;
-    color: var(--text);
 }
 
 /* LOG */
@@ -922,6 +1058,33 @@ a:hover {
 
 .forgot-password {
     color: var(--text) !important;
+}
+
+input[type=email],
+input[type=password] {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #FFF;
+}
+
+.button {
+    border-color: var(--button-color);
+    background-color: var(--button-color);
+    cursor: pointer;
+}
+
+.button:hover {
+    border-color: var(--button-color-hover);
+    background-color: var(--button-color-hover);
+    color: #fff;
+    text-decoration: none;
+}
+
+.form-input:focus {
+    outline: 0;
+    border-color: #fff;
+    box-shadow: none;
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
 /* Custom filter */
@@ -974,8 +1137,17 @@ a:hover {
     background-color: rgba(0, 0, 0, .25);
 }
 
+[class*="AuthorDetailsSeason-books-"] {
+    border-top: 1px solid rgb(255 255 255 / 50%);
+}
+
+[class*="AuthorDetails-tabList-"] {
+    border-bottom: 1px solid rgb(255 255 255 / 50%);
+    color: var(--text-hover);
+}
+
 [class*="BookDetails-selectedTab-"] {
-    border-bottom: 4px solid var(--accent-color);
+    border-bottom: 4px solid rgb(var(--accent-color));
 }
 
 [class*="BookshelfBook-book-"] {
@@ -1009,12 +1181,9 @@ a:hover {
 }
 
 /*Search Tab*/
-[class*="MenuButton-menuButton-"] {
-    color: #FFF;
-}
 
 [class*="AuthorDetails-selectedTab-"] {
-    border-bottom: 4px solid var(--accent-color);
+    border-bottom: 4px solid rgb(var(--accent-color));
 }
 
 [class*="AuthorDetails-metadataMessage-"] {
@@ -1022,7 +1191,7 @@ a:hover {
 }
 
 [class*="AuthorDetails-metadataMessage-"] [class*="Link-to-"] {
-    color: var(--accent-color);
+    color: rgb(var(--accent-color));
 }
 
 [class*="AuthorDetails-metadataMessage-"] [class*="Link-to-"]:hover {

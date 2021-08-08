@@ -16,16 +16,26 @@
 
 body {
     background: var(--main-bg-color);
-    color: var(--text-color)
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
+    color: var(--text)
 }
 
 /* TEXT COLOR */
 p,
-.card .text-wrap .title,
 .card .text-wrap .year,
 .media-content .overview,
-.media-content .media-crew .crew-credit {
-    color: var(--text-color);
+.media-content .media-crew .crew-credit,
+.media-content .media-crew .sidebar--item a,
+.sidebar--item .media-content .media-crew a,
+.sidebar--item p,
+.menu--item p {
+    color: var(--text);
 }
 
 h1,
@@ -34,8 +44,21 @@ h3,
 h4,
 h5,
 h6,
-.person--details p {
-    color: #fff;
+.person--details p,
+.text-wrap>p,
+.card .text-wrap .title,
+.main-title,
+.media-details .media-title,
+.single-title,
+.sub-title,
+.sub-title,
+.widget--title,
+.settings--menu--item p {
+    color: var(--text-hover);
+}
+
+.card .text-wrap>p {
+    color: var(--text-hover);
 }
 
 .settings--menu--item.active p {
@@ -44,6 +67,10 @@ h6,
 
 .settings--menu--item.active {
     border-bottom: 1px solid rgb(var(--accent-color));
+}
+
+.settings--menu--item:hover {
+    border-bottom: 1px solid var(--text-hover);
 }
 
 .settings--menu--item.active .icon svg path {
@@ -60,6 +87,13 @@ h6,
     .sidebar--inner,
     .sidebar--scroll {
         background: var(--modal-bg-color);
+        background-repeat: repeat, no-repeat;
+        background-attachment: fixed, fixed;
+        background-position: center center, center center;
+        background-size: auto, cover;
+        -webkit-background-size: auto, cover;
+        -moz-background-size: auto, cover;
+        -o-background-size: auto, cover;
     }
 }
 
@@ -70,17 +104,31 @@ h6,
 }
 
 @media (max-width: 991.98px) {
-   .menu {
-        background: var(--modal-bg-color)
+    .menu {
+        background: var(--modal-bg-color);
+        background-repeat: repeat, no-repeat;
+        background-attachment: fixed, fixed;
+        background-position: center center, center center;
+        background-size: auto, cover;
+        -webkit-background-size: auto, cover;
+        -moz-background-size: auto, cover;
+        -o-background-size: auto, cover;
     }
 }
 
 .mob-menu-top {
     background: var(--modal-bg-color);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
 }
 
 .menu--item.active {
-    background: rgba(255, 255, 255, .15);
+    background: rgba(var(--accent-color), .05);
     border-right: 4px solid rgb(var(--accent-color));
 }
 
@@ -97,7 +145,7 @@ h6,
 }
 
 .sidebar--item.active {
-    background: rgba(255, 255, 255, .15);
+    background: rgba(var(--accent-color), .05);
     border-top: 4px solid rgb(var(--accent-color));
 }
 
@@ -117,6 +165,19 @@ h6,
     background: rgb(var(--accent-color));
 }
 
+.sidebar--item:hover p,
+.sidebar--item:hover .icon svg path,
+.menu--item:hover p,
+.menu--item:hover .icon svg path {
+    color: rgb(var(--accent-color));
+    fill: rgb(var(--accent-color));
+}
+
+.sidebar--item .icon svg path,
+.menu--item .icon svg path {
+    fill: var(--text);
+}
+
 /* LINKS */
 a,
 .table-action,
@@ -129,9 +190,25 @@ p a,
     color: var(--link-color);
 }
 
+a:hover,
+.table-action:hover,
+.session--toggle:hover,
+p a:hover,
+.profile-page .logout:hover,
+.person--bio--read-more:hover,
+.filter--item--collapse:hover,
+.filter--comparison:hover {
+    color: var(--link-color-hover);
+}
+
 /* OTHER */
 .widget--item hr {
     background: rgb(255 255 255 / 50%);
+}
+
+.widget--item--inner,
+.sr--instance--inner {
+    background: hsl(0deg 0% 0% / 15%);
 }
 
 .filter--add:hover {
@@ -149,7 +226,7 @@ p a,
 }
 
 .spinner svg {
-    filter: var(--spinner);
+    filter: var(--petio-spinner);
 }
 
 .request-status {
@@ -206,7 +283,8 @@ code {
     background: rgb(var(--accent-color));
 }
 
-.card--inner:hover .image-wrap {
+.card--inner:hover .image-wrap,
+.company-card:hover .company-card--inner {
     -webkit-filter: brightness(.7);
     filter: brightness(.7);
     -webkit-box-shadow: 0 0 0 2px rgb(var(--accent-color)), 0 5px 10px 0 rgb(0 0 0 / 30%);
@@ -247,14 +325,15 @@ code {
 }
 
 /* Keep Plex Button Color*/
-#root > div > div.login-wrap > div.login--inner > form > div:nth-child(7) > button,
-#root > div > div.view > div > div > div.settings--content > section:nth-child(2) > button:nth-child(3) {
+#root>div>div.login-wrap>div.login--inner>form>div:nth-child(7)>button,
+#root>div>div.view>div>div>div.settings--content>section:nth-child(2)>button:nth-child(3) {
     background: #d79b23;
     border: 2px solid #d79b23;
     color: #000;
 }
-#root > div > div.login-wrap > div.login--inner > form > div:nth-child(7) > button:hover,
-#root > div > div.view > div > div > div.settings--content > section:nth-child(2) > button:nth-child(3):hover {
+
+#root>div>div.login-wrap>div.login--inner>form>div:nth-child(7)>button:hover,
+#root>div>div.view>div>div>div.settings--content>section:nth-child(2)>button:nth-child(3):hover {
     background: #ab7b1c;
     border-color: #ab7b1c;
 }
@@ -324,7 +403,7 @@ code {
 }
 
 thead {
-    color: #fff;
+    color: var(--text-hover);
     background: rgba(0, 0, 0, 0.25);
 }
 
@@ -338,12 +417,26 @@ thead {
 .issues--inner,
 .review--main {
     background: var(--modal-bg-color);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
 }
 
 .modal--top,
 .issues--top,
 .review--top {
     background: var(--modal-bg-color);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
 }
 
 /* FORMS & INPUTS */
@@ -354,19 +447,19 @@ input[type=checkbox]:checked:after {
 input:not([type=checkbox]):not(.styled-input--input):not([type=file]):focus {
     border-bottom: 2px solid rgb(var(--accent-color));
     background: rgba(255, 255, 255, .2);
-    color: var(--text-color-hover)
+    color: var(--text-hover)
 }
 
 input:not([type=checkbox]):not(.styled-input--input):not([type=file]),
 .login-wrap input {
     border-bottom: 2px solid rgba(0, 0, 0, 0);
-    color: var(--text-color);
+    color: var(--text);
     background: rgb(255 255 255 / 10%);
 }
 
 .search-form input:focus {
     background: hsla(0, 0%, 100%, .1) !important;
-    color: var(--text-color-hover) !important;
+    color: var(--text-hover) !important;
     border-bottom: 2px solid rgba(0, 0, 0, 0) !important;
 }
 

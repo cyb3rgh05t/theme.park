@@ -23,7 +23,7 @@
     },
     "prowlarr": {
       "prowlarr-darker": "https://themes.streamnet.club\n/css/addons/prowlarr/prowlarr-darker/prowlarr-darker.css?sha=c7aa9c3221ae3e77beccc3e6c2c4b729",
-      "prowlarr-text-logo": "https://themes.streamnet.club\n/css/addons/prowlarr/prowlarr-text-logo/prowlarr-text-logo.css?sha=64b0a3482cea552bccd37f6c4c4a1062"
+      "prowlarr-text-logo": "https://themes.streamnet.club\n/css/addons/prowlarr/prowlarr-text-logo/prowlarr-text-logo.css?sha=f0cda6e70f1caaac41c8275d8c946f1f"
     },
     "radarr": {
       "radarr-4k-logo": "https://themes.streamnet.club\n/css/addons/radarr/radarr-4k-logo/radarr-4k-logo.css?sha=049d5b05c28e55431ab2b424720d4ea4",
@@ -359,7 +359,7 @@
     "prowlarr": {
       "addons": {
         "prowlarr-darker": "https://themes.streamnet.club\n/css/addons/prowlarr/prowlarr-darker/prowlarr-darker.css?sha=c7aa9c3221ae3e77beccc3e6c2c4b729",
-        "prowlarr-text-logo": "https://themes.streamnet.club\n/css/addons/prowlarr/prowlarr-text-logo/prowlarr-text-logo.css?sha=64b0a3482cea552bccd37f6c4c4a1062"
+        "prowlarr-text-logo": "https://themes.streamnet.club\n/css/addons/prowlarr/prowlarr-text-logo/prowlarr-text-logo.css?sha=f0cda6e70f1caaac41c8275d8c946f1f"
       },
       "base_css": "https://themes.streamnet.club\n/css/base/prowlarr/prowlarr-base.css?sha=0b077d21e39d54b15eb310ae98f0a123"
     },

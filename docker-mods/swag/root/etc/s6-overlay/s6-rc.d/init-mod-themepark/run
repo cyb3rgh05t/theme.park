@@ -1,0 +1,62 @@
+#!/usr/bin/with-contenv bash 
+
+echo '-------------------------'
+echo '|  SWAG theme.park Mod  |'
+echo '-------------------------'
+
+# Display variables for troubleshooting
+echo -e "Variables set:\\n\
+'TP_BRANCH'=${TP_BRANCH}\\n"
+
+# Set default
+if [[ -z ${TP_BRANCH} ]]; then
+    echo 'No branch set, defaulting to live'
+    TP_BRANCH='live'
+fi
+
+if [[ ${TP_BRANCH} == "master" ]]; then
+    TP_BRANCH='live'
+fi
+
+if [[ ${TP_BRANCH} == "develop" ]]; then
+    TP_BRANCH='live_develop'
+fi
+
+if [[ ${TP_BRANCH} == "testing" ]]; then
+    TP_BRANCH='live_testing'
+fi
+
+mkdir -p /config/www/themepark
+
+SHA_RELEASE=$(curl -sL "https://api.github.com/repos/themepark-dev/theme.park/commits/${TP_BRANCH}" | jq -r '.sha');
+if [[ ! -f "/config/www/themepark/sha.txt" ]]; then 
+    SHA=""
+else
+    SHA=$(cat /config/www/themepark/sha.txt)
+fi
+# Downloading fresh webui files from source.
+if [[ $SHA != $SHA_RELEASE ]]; then
+    echo "-----------------------------------------------------"
+    echo "| Cloning latest files from ${TP_BRANCH} branch |"
+    echo "-----------------------------------------------------"
+    rm -rf /tmp/themepark
+    git clone --depth 1 --quiet --branch ${TP_BRANCH} https://github.com/themepark-dev/theme.park.git /tmp/themepark
+    echo "-----------------------------------------------------"
+    echo "| Copying files to /config/www/themepark |"
+    echo "-----------------------------------------------------"
+    cp -a /tmp/themepark/css /config/www/themepark/
+    cp -a /tmp/themepark/resources /config/www/themepark/
+    cp -a /tmp/themepark/themes.json /config/www/themepark/
+    cp -a /tmp/themepark/index.html /config/www/themepark/
+    rm -rf /tmp/themepark
+    echo "-----------------------------------------------------"
+    echo '| Clone and copy finished |'
+    echo "-----------------------------------------------------"
+fi
+
+cat <<< "$SHA_RELEASE" > "/config/www/themepark/sha.txt"
+cp /themepark-confs/* /config/nginx/proxy-confs
+
+# permissions
+chown -R abc:abc \
+    /config/www/themepark

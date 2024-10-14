@@ -14,6 +14,8 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,600,700,300);
 @import url("/css/defaults/placeholders.css");
 @import url("/css/defaults/transparent.css");
+@import url("/css/defaults/rutorrent-panel-labek.css");
+@import url("/css/defaults/rutorrent-category-panel.css");
 
 @font-face {
     font-family: 'Roboto' !important

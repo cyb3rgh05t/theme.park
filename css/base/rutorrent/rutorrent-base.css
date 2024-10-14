@@ -34,6 +34,17 @@ body {
     text-shadow: 0 -1px 0 #000
 }
 
+#CatList {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 0px;
+    border: 1px solid #A0A0A0;
+    background-color: #ffffff0a;
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-width: 160px;
+
 div#preload {
     width: 0;
     height: 0;

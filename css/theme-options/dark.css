@@ -22,6 +22,10 @@
   --text-hover: #fff;
   --text-muted: #999;
 
+  /*sidebar*/
+  --heading-background-color: transparent;
+	--heading-border-color: #323232;
+
   /*Specials*/
   --arr-queue-color: #6b5; /* Servarr apps + Bazarr*/
   --plex-poster-unwatched: #e5a00d;

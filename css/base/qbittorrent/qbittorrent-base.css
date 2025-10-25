@@ -253,7 +253,7 @@ label {
 }
 
 .dynamicTable th {
-  background: var(--transparency-dark-25) !important;
+  background: var(--transparency-dark-25);
   border-right-color: rgba(255, 255, 255, .08) !important;
   color: var(--text-hover);
 }

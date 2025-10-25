@@ -1,0 +1,191 @@
+@import url("/css/defaults/placeholders.css");
+@import url("/css/defaults/transparent.css");
+
+:root {
+    --scheme-main-ter: var(--main-bg-color);
+    --text-strong-color: var(--button-text-hover);
+    --border-color: var(--transparency-light-25);
+    --logo-color: rgb(var(--accent-color));
+    --body-background-color: var(--main-bg-color);
+    --border-hover-color: rgb(var(--accent-color));
+    --header-button-color: var(--button-color); /* Docmost overrider --button-color in some fields so I make a copy of --button-color at the start */
+}
+
+* {
+    outline: none;
+}
+
+html,
+body,
+.mantine-Modal-content,
+.mantine-Spotlight-content {
+    background: var(--main-bg-color) !important;
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
+    color: var(--text);
+}
+
+[class^="_header"] .mantine-UnstyledButton-root,
+[class^="_header"] .mantine-Button-root,
+nav .mantine-Group-root .mantine-UnstyledButton-root {
+    background: var(--header-button-color) !important;
+    color: var(--button-text) !important;
+}
+
+[class^="_header"] .mantine-UnstyledButton-root:hover,
+[class^="_header"] .mantine-Button-root:hover,
+nav .mantine-Group-root .mantine-UnstyledButton-root:hover {
+    background: var(--button-color-hover) !important;
+    color: var(--button-text-hover) !important;
+}
+
+header [class^="_link"]:hover,
+nav a.isSelected,
+nav [class^="_actions"] {
+    background: var(--transparency-light-10) !important;
+    color: rgb(var(--accent-color)) !important;
+}
+
+nav a.isSelected:hover,
+nav a:hover,
+nav button:hover,
+nav [class^="_actions"] {
+    background: var(--transparency-dark-25) !important;
+    color: var(--button-text-hover) !important;
+}
+
+.mantine-Tabs-tab {
+    border-color: rgb(var(--accent-color)) ;
+}
+
+header,
+.mantine-Group-root,
+.mantine-Divider-root,
+.mantine-Select-input,
+.mantine-Switch-trackLabel,
+.mantine-Paper-root,
+.mantine-Table-table,
+.mantine-TextInput-input,
+.mantine-Menu-dropdown,
+.mantine-Menu-divider,
+.mantine-Tabs-root .mantine-Table-tr,
+nav .mantine-Group-root .mantine-ActionIcon-root,
+nav [class^="_section"] {
+    border-color: var(--transparency-light-10) !important;
+}
+
+.mantine-Badge-root {
+    background: rgb(var(--accent-color));
+    color: var(--button-text);
+}
+
+[class^="_editor"] .ProseMirror,
+[class^="_card"] .mantine-Card-section {
+    background: transparent;
+}
+
+svg,
+nav a.isSelected:hover svg {
+    stroke: rgb(var(--accent-color));
+}
+
+[class^="_header"] .mantine-UnstyledButton-root svg,
+nav .mantine-Group-root .mantine-UnstyledButton-root svg {
+    stroke: var(--button-text);
+}
+
+.mantine-Menu-dropdown,
+.mantine-Popover-dropdown {
+    background: var(--drop-down-menu-bg);
+    color: var(--text);
+}
+
+label:has(input:checked) .mantine-Switch-track {
+    background: rgb(var(--accent-color));
+    color: var(--button-text);
+}
+
+.mantine-Menu-item:hover,
+.mantine-SegmentedControl-indicator {
+    background: var(--transparency-light-10);
+    color: var(--text-hover);
+}
+
+a[class*="_activeButton"],
+a[class^="_link"][data-active] {
+    background: var(--transparency-light-10) !important;
+    color: var(--text-hover) !important;
+}
+
+[class^="_header"],
+.mantine-Table-tr:hover,
+.mantine-Tabs-tab:hover{
+    background: var(--transparency-dark-10);
+    color: var(--text);
+}
+
+.mantine-SegmentedControl-root,
+[class^="_card"],
+.mantine-Table-th,
+.mantine-Paper-root {
+    background: var(--transparency-dark-25);
+    color: var(--text);
+}
+
+header,
+nav,
+[class^="_editor"] .tableWrapper tr th,
+.mantine-Input-input,
+.mantine-Table-td .mantine-Button-root,
+.mantine-AppShell-aside{
+    background: var(--transparency-dark-25) !important;
+    color: var(--text) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+section header,
+.menu-label,
+.mantine-Menu-label {
+    color: var(--text-hover) !important;
+}
+
+.mantine-Input-input,
+a[class^="_link"],
+a[class^="_link"][data-active],
+.mantine-SegmentedControl-innerLabel,
+.mantine-Menu-item,
+nav * {
+    color: var(--text);
+}
+
+a.mantine-Anchor-root {
+    color: var(--text) !important; /* Replace with your desired color */
+}
+
+.mantine-Alert-root {
+    background: rgb(var(--accent-color));
+}
+
+.mantine-Alert-message {
+    color: var(--text-hover);
+}
+
+.mantine-Alert-root svg {
+    stroke: var(--text-hover);
+}
+
+a[class^="_link"][data-active] span:hover {
+    background: transparent !important;
+    color: inherit;
+}

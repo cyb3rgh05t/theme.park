@@ -55,7 +55,7 @@
 
 /* LABLES */
 
-[class*="Label-default-"] {
+[class*="Label-default-"]:not([class*="MovieDetails-detailsInfoLabel-"]) {
     border-color: var(--label-color);
     background-color: var(--label-color);
     color: var(--label-text-color);

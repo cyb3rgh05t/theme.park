@@ -162,10 +162,10 @@ hr {
   background-color: var(--link-color-hover);
 }
 
-/* .navbar-btn {
+.navbar-btn {
   background: var(--button-color) !important;
   border-color: transparent !important;
-} */
+}
 
 .navbar-inverse .navbar-nav>.open>a,
 .navbar-inverse .navbar-nav>.open>a:hover,
@@ -190,6 +190,8 @@ hr {
 
 .dropdown-menu,
 #feedback-slider,
+.navbar-collapse,
+.navbar-header,
 .navbar-collapse.in .dropdown-menu {
   background: var(--drop-down-menu-bg);
   background-repeat: repeat, no-repeat;
@@ -290,7 +292,7 @@ svg.peity polyline {
 
 .btn-default {
   color: var(--button-text) !important;
-  background: var(--button-color);
+  background: var(--button-color) !important;
   border-color: var(--button-color);
   outline: none !important;
 }
@@ -298,13 +300,13 @@ svg.peity polyline {
 .btn-default:focus,
 .btn-default.focus {
   color: var(--button-text-hover) !important;
-  background: var(--button-color-hover);
+  background: var(--button-color-hover) !important;
   border-color: var(--button-color-hover);
 }
 
 .btn-default:hover {
   color: var(--button-text-hover) !important;
-  background: var(--button-color-hover);
+  background: var(--button-color-hover) !important;
   border-color: var(--button-color-hover);
 }
 
@@ -504,8 +506,17 @@ td.delete .dropdown>a .caret {
   border-top-color: var(--button-color) !important;
 }
 
+fieldset>div,
+.history-table>tbody>tr:nth-of-type(odd),
 .table-striped>tbody>tr:nth-of-type(odd) {
-  background: var(--transparency-dark-25);
+  background: var(--transparency-dark-25) !important;
+}
+
+fieldset>div.even,
+  /* fieldset>div:nth-of-type(odd), */
+.history-table>tbody>tr:nth-of-type(even),
+.table-striped>tbody>tr:nth-of-type(even) {
+  background: transparent !important;
 }
 
 tbody.no-downloads tr td {
@@ -559,6 +570,14 @@ tr td.row-extra-text,
   background: var(--transparency-light-25);
 }
 
+.addRssTable td {
+  background: var(--main-bg-color) !important;
+}
+
+.addRssTable button {
+  background: var(--button-color) !important;
+}
+
 .progress .progress-bar .fileDetails {
   color: var(--button-text);
 }
@@ -598,7 +617,6 @@ tr td.row-extra-text,
 .processing-download>div {
   background-color: #888;
 }
-
 
 .multioperations-selector {
   border: 1px solid transparent !important;

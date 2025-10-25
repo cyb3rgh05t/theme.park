@@ -10,6 +10,12 @@ if [ "${TP_HOTIO}" = true ]; then
     APP_FILEPATH='/config/config/qBittorrent.conf'
 fi
 
+# Validate that the config file exist
+if [[ ! -f "${APP_FILEPATH}" ]]; then
+    echo "qBittorrent config file not found at ${APP_FILEPATH}. Please ensure qBittorrent is configured correctly."
+    exit 0
+fi
+
 # Backup config
 if [[ ! -f "${APP_FILEPATH}.bak" ]]; then
     echo "Creating qBittorrent.conf backup in /config."
@@ -135,24 +141,30 @@ do
     clean_file $fname
 done
 
-if ! grep -q "WebUI\\\RootFolder" "${APP_FILEPATH}"; then
-    echo '--------------------------------------'
-    echo '| Adding WebUI\RootFolder=/themepark |'
-    echo '--------------------------------------'
-    sed -i -e '$aWebUI\\RootFolder=/themepark' "${APP_FILEPATH}";
-fi
+if ! grep -q "WebUI\\\RootFolder" "${APP_FILEPATH}" || ! grep -q "WebUI\\\AlternativeUIEnabled" "${APP_FILEPATH}"; then
+    if ! grep -q "^\[Preferences\]" "${APP_FILEPATH}"; then
+        printf '\n%s\n' "[Preferences]" >> "${APP_FILEPATH}"
+    fi
 
-if ! grep -q "WebUI\\\AlternativeUIEnabled" "${APP_FILEPATH}"; then
-    echo '------------------------------------------'
-    echo '| Adding WebUI\AlternativeUIEnabled=true |'
-    echo '------------------------------------------'
-    sed -i -e '$aWebUI\\AlternativeUIEnabled=true' "${APP_FILEPATH}";
+    if ! grep -q "WebUI\\\RootFolder" "${APP_FILEPATH}"; then
+        echo '--------------------------------------'
+        echo '| Adding WebUI\RootFolder=/themepark |'
+        echo '--------------------------------------'
+        sed -i -e '/\[Preferences\]/aWebUI\\RootFolder=/themepark' "${APP_FILEPATH}"
+    fi
+
+    if ! grep -q "WebUI\\\AlternativeUIEnabled" "${APP_FILEPATH}"; then
+        echo '------------------------------------------'
+        echo '| Adding WebUI\AlternativeUIEnabled=true |'
+        echo '------------------------------------------'
+        sed -i -e '/\[Preferences\]/aWebUI\\AlternativeUIEnabled=true' "${APP_FILEPATH}"
+    fi
 fi
 
 if  ! grep -q "WebUI\\\RootFolder=/themepark" "${APP_FILEPATH}" || ! grep -q "WebUI\\\AlternativeUIEnabled=true" "${APP_FILEPATH}"; then
     echo '-------------------------------------------------------'
     echo '| Updating RootFolder and AlternativeUIEnabled values |'
     echo '-------------------------------------------------------'
-    sed -i "s/WebUI\\\AlternativeUIEnabled=.*$/WebUI\\\AlternativeUIEnabled=true/g" "${APP_FILEPATH}";
-    sed -i "s/WebUI\\\RootFolder=.*$/WebUI\\\RootFolder=\/themepark/g" "${APP_FILEPATH}";
+    sed -i "s/WebUI\\\AlternativeUIEnabled=.*$/WebUI\\\AlternativeUIEnabled=true/g" "${APP_FILEPATH}"
+    sed -i "s/WebUI\\\RootFolder=.*$/WebUI\\\RootFolder=\/themepark/g" "${APP_FILEPATH}"
 fi
